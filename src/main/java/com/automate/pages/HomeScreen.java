@@ -362,7 +362,7 @@ public class HomeScreen extends ScreenActions {
         scrollToElementAndClick(LatestQuizCard, "Play Quiz");
     }
 
-    public void verifyHowItWorks() {
+    public void validateHowItWorks() {
         navigateToPlayQuiz();
         verifyElementPresentAndClick(HowItWorksButton, "'HOW IT WORKS ?' section should be available"); //VD-TC-443
         Assert.assertTrue(verifyElementPresent(HeaderSectn, "Header Section"),"After Expanding verifying Header section");
@@ -378,14 +378,14 @@ public class HomeScreen extends ScreenActions {
         Assert.assertTrue(verifyElementPresent(LeaderBoard, "LEADERBOARD section"),"LEADERBOARD section should be displayed"); //VD-TC-423
     }
 
-    public void verifyPlayMoreRunwayGeniusViewAllSectionUnderResults() {
+    public void validatePlayMoreRunwayGeniusViewAllSectionUnderResults() {
         scrollUntilElementVisible(playMoreRunwayGeniusSectionUnderResults);
         scrollUntilElementVisible(viewAllSectionUnderResults);
         Assert.assertTrue(verifyElementPresent(playMoreRunwayGeniusSectionUnderResults, "PLAY MORE RUNWAY GENIUS"), "PLAY MORE RUNWAY GENIUS section should be displayed"); //425
         Assert.assertTrue(verifyElementPresent(viewAllSectionUnderResults,"VIEW ALL"), "VIEW ALL section should be displayed"); //426
     }
 
-    public void verifyQuizznameAndPlaynowCTAbuttonForEachSlideOftheQuizz() {
+    public void validateQuizznameAndPlaynowCTAbuttonForEachSlideOftheQuizz() {
         Assert.assertTrue(verifyElementPresent(playQuizButtonUnderPlayMoreRunwayGenius,"PLAY QUIZ"), "PLAY QUIZ should be available"); //VD-TC-428
         Assert.assertTrue(verifyElementPresent(playQuizButtonUnderPlayMoreRunwayGenius, "Quiz Name"), "Quiz Name should be in first slide");//VD-TC-428
         scrollVertical();
@@ -399,14 +399,14 @@ public class HomeScreen extends ScreenActions {
         Assert.assertTrue(verifyElementPresent(playQuizButtonUnderPlayMoreRunwayGenius, "Quiz Name"), "Quiz Name should be present in third slide");//VD-TC-428
     }
 
-    public void verifyPlayButtonAndDifficultyLevelForQuiz() {
+    public void validatePlayButtonAndDifficultyLevelForQuiz() {
         Assert.assertTrue(verifyElementPresentAndClick(playQuizButtonUnderPlayMoreRunwayGenius, "PLAY QUIZ under PLAY MORE RUNWAY GENIUS"), "PLAY QUIZ under PLAY MORE RUNWAY GENIUS should be displayed"); // TC_429
         Assert.assertTrue(verifyElementPresent(difficultyLevel, "DIFFICULTY MODE"), "DIFFICULTY:GENIUS should be present"); //TC_518
         click(BackButton, "Back Button");
         click(BackButton, "Back Button");
     }
 
-    public void verifyHowItWorksContent() {
+    public void validateHowItWorksContent() {
         // verifying all sections // VD-TC-444
         navigateToPlayQuiz();
         verifyElementPresentAndClick(HowItWorksButton, "'HOW IT WORKS ?' section should be available");
@@ -424,7 +424,7 @@ public class HomeScreen extends ScreenActions {
         click(BackButton, "Back Button");
     }
 
-    public void verifyHowItSectionScroll(){
+    public void validateHowItSectionScroll(){
         navigateToPlayQuiz();
         verifyElementPresentAndClick(HowItWorksButton, "'HOW IT WORKS ?'");
         waitForVisibility(HeaderSectn,30);
@@ -432,21 +432,21 @@ public class HomeScreen extends ScreenActions {
         click(BackButton, "Back Button");
     }
 
-    public void gotItButtonOnPlayQuiz(){
+    public void validateGotItButtonOnPlayQuiz(){
         navigateToPlayQuiz();
         verifyElementPresentAndClick(HowItWorksButton, "HOW IT WORKS ?");
         verifyElementPresentAndClick(GotItButton, "GOT IT"); //VD-TC-446
         click(BackButton, "Back Button");
     }
 
-    public void verifyBackArrowOnQuizScreen(){
+    public void validateBackArrowOnQuizScreen(){
         navigateToPlayQuiz();
         verifyElementPresentAndClick(PlayButton, "PLAY");
         Assert.assertTrue(verifyElementPresent(BackButton, "Back Arrow"),"Back arrow should be displayed on top of the screen"); //VD-TC-447
         click(BackButton, "Back Button");
     }
 
-    public void verifyQuizSlideCount(){
+    public void validateQuizSlideCount(){
         navigateToPlayQuiz();
         verifyElementPresentAndClick(PlayButton, "PLAY");
         Assert.assertTrue(verifyElementPresent(QuizCount, "Quiz Count"),"Quiz slide should have slide count on the top of the screen"); //VD-TC-448
@@ -465,7 +465,7 @@ public class HomeScreen extends ScreenActions {
         Assert.assertTrue(verifyElementPresent(VogueLogo, "Vogue logo"), "Vogue logo should be displayed");
     }
 
-    public void verifyPlayingQuiz()  {
+    public void validatePlayingQuiz()  {
         navigateToPlayQuiz();
         verifyElementPresentAndClick(PlayButton, "PLAY");
         for (int i = 1; i <= 7; i++) {
@@ -483,7 +483,7 @@ public class HomeScreen extends ScreenActions {
         verifyElementPresentAndClick(ContinueButton, "CONTINUE");
     }
 
-    public void shareOptions()  { //VD-TC-410
+    public void validateShareOptions()  { //VD-TC-410
         verifyElementPresentAndClick(ShareButton, "Share option at the top right corner");
         Assert.assertTrue(verifyElementPresent(MessageButton, "MESSAGE option"),"MESSAGE option should be displayed");
         waitingFor(1000);
@@ -494,7 +494,7 @@ public class HomeScreen extends ScreenActions {
         scrollDownHoldingElement(vogueComButton);
     }
 
-    public void  shareWithFrnzMsg(){
+    public void  validateShareWithFrnzMsg(){
         // verifying after clicking on MESSAGE it is directed to the correct page // VD-TC-437
         verifyElementPresentAndClick(ShareButton, "SHARE WITH FRIENDS");
         verifyElementPresentAndClick(MessageButton, "MESSAGE option");
