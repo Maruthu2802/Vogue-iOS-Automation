@@ -1,0 +1,35 @@
+name: Scheduled TestNG Tests (iOS)
+on:
+  push:
+  schedule:
+    - cron: '* * *'
+  workflow_dispatch: # optional manual trigger
+
+jobs:
+  run-testng:
+    runs-on: ubuntu-latest
+
+    env:
+      LT_USERNAME: ${{ secrets.LT_USERNAME }}
+      LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      - name: Run TestNG Suite on LambdaTest
+        run: mvn clean test -DsuiteXmlFile=testng.xml

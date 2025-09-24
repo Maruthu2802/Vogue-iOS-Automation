@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="TNY_Suite" parallel="tests" thread-count="2">
+
+
+    <!-- LambdaTest iOS -->
+    <test name="LambdaTest_iOS">
+        <parameter name="executionType" value="lambdatest"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="deviceName" value="iPhone 14 Pro"/>
+        <parameter name="platformVersion" value="16"/>
+        <parameter name="app" value="lt://APP_ID_FROM_LAMBDATEST"/>
+        <parameter name="appName" value="TNY_iOS_Test"/>
+        <parameter name="ltUser" value="YOUR_LT_USERNAME"/>
+        <parameter name="ltKey" value="YOUR_LT_ACCESS_KEY"/>
+        <classes>
+            <class name="com.Tests.HomeScreenRelated_Tests"/>
+        </classes>
+    </test>
+
+<!--    &lt;!&ndash; LambdaTest Android &ndash;&gt;
+    <test name="LambdaTest_Android">
+        <parameter name="executionType" value="lambdatest"/>
+        <parameter name="platform" value="ANDROID"/>
+        <parameter name="deviceName" value="Galaxy S23"/>
+        <parameter name="platformVersion" value="13"/>
+        <parameter name="app" value="lt://APP_ID_FROM_LAMBDATEST"/>
+        <parameter name="appName" value="TNY_Android_Test"/>
+        <parameter name="ltUser" value="YOUR_LT_USERNAME"/>
+        <parameter name="ltKey" value="YOUR_LT_ACCESS_KEY"/>
+        <classes>
+            <class name="com.Tests."/>
+        </classes>
+    </test>-->
+
+</suite>

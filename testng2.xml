@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="1">
+    <listeners>
+        <listener class-name="com.automate.listeners.Listeners"/>
+        <listener class-name="utils.AnnotationTransformer"/>
+    </listeners>
+
+    <test name="UnsuccessfulLoginTests">
+        <parameter name="session.override" value="true"/>
+        <parameter name="executionType" value="local"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="deviceName" value="iPhone 14"/>
+        <parameter name="platformVersion" value="16.6"/>
+        <parameter name="udid" value="00008110-000C299836BA201E"/>
+        <parameter name="bundleId" value="com.condenast.voguerunway.rokmetro"/>
+        <parameter name="port" value="4726"/>
+        <classes>
+            <class name="com.Tests.HomeScreenRelated_Tests">
+                <methods>
+                    <include name="VD_TC_22_Unsuccessful_Login"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="HomeScreenRelatedTests">
+        <parameter name="session.override" value="true"/>
+        <parameter name="executionType" value="local"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="deviceName" value="iPhone 14"/>
+        <parameter name="platformVersion" value="16.6"/>
+        <parameter name="udid" value="00008110-000C299836BA201E"/>
+        <parameter name="bundleId" value="com.condenast.voguerunway.rokmetro"/>
+        <parameter name="port" value="4726"/>
+        <classes>
+            <class name="com.Tests.HomeScreenRelated_Tests">
+                <methods>
+                    <exclude name="VD_TC_22_Unsuccessful_Login"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="PostRelatedTests">
+        <parameter name="session.override" value="true"/>
+        <parameter name="executionType" value="local"/>
+        <parameter name="platform" value="iOS"/>
+        <parameter name="deviceName" value="iPhone 14"/>
+        <parameter name="platformVersion" value="16.6"/>
+        <parameter name="udid" value="00008110-000C299836BA201E"/>
+        <parameter name="bundleId" value="com.condenast.voguerunway.rokmetro"/>
+        <parameter name="port" value="4726"/>
+        <classes>
+            <class name="com.Tests.PostRelated_Tests">
+            </class>
+        </classes>
+    </test>
+  
+ 
+
+
+</suite> <!-- Suite -->

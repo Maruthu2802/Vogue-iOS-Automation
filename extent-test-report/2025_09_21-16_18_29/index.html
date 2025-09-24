@@ -1,0 +1,4093 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Automation Test Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report dark">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Mobile Automation Results</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Sep 21, 2025 04:18:29 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('device-view')">
+<a id="nav-device" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tablet"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('author-view')">
+<a id="nav-author" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-user"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<a class="dropdown-item" status="skip" href="#"><span>Skip</span><span class="status warning"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+<ul id="author-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">SatishA</a><a class="dropdown-item" href="#">Vidya</a><a class="dropdown-item" href="#">Shivumuni</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">SMOKE</a><a class="dropdown-item" href="#">REGRESSION</a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tablet"></i></a>
+<ul id="device-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">IOS-iPhone14</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="skip" test-id="1"
+          author="SatishA"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_22_Unsuccessful_Login</p>
+            <p class="text-sm">
+              <span>4:19:01 PM</span> / <span>00:00:37:004</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_22_Unsuccessful_Login</h5>
+<span class='badge badge-success'>09.21.2025 4:19:01 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:19:38 PM</span>
+<span class='badge badge-default'>00:00:37:004</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:19:01 PM</td>
+        <td>
+          Test - <b>VD_TC_22_Unsuccessful_Login</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:19:02 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:19:34 PM</td>
+        <td>
+          Test - <b>VD_TC_22_Unsuccessful_Login</b> is skipped
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:19:35 PM</td>
+        <td>
+          Clicked on ProfileIcon
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:19:37 PM</td>
+        <td>
+          Clicked on the SettingIcon
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:19:37 PM</td>
+        <td>
+          Clicked on Signout button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:19:38 PM</td>
+        <td>
+          Clicked on yes in Signout confirmation pop up
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="2"
+          author="SatishA"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_22_Unsuccessful_Login</p>
+            <p class="text-sm">
+              <span>4:19:42 PM</span> / <span>00:00:27:231</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">VD_TC_22_Unsuccessful_Login</h5>
+<span class='badge badge-success'>09.21.2025 4:19:42 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:20:09 PM</span>
+<span class='badge badge-default'>00:00:27:231</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:19:42 PM</td>
+        <td>
+          Test - <b>VD_TC_22_Unsuccessful_Login</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:19:43 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:19:51 PM</td>
+        <td>
+          The element Sign In Button is present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:19:52 PM</td>
+        <td>
+          Clicked on the element Sign In Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:19:57 PM</td>
+        <td>
+          Clicked on Sign In Another Way Link
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:20:06 PM</td>
+        <td>
+          Typed the value Satish into Email Address Text Field
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:20:07 PM</td>
+        <td>
+          The element Continue With Email Button is present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:20:08 PM</td>
+        <td>
+          Clicked on the element Continue With Email Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:20:09 PM</td>
+        <td>
+          The element Invalid Email Error Message is present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:20:09 PM</td>
+        <td>
+          Test - <b>VD_TC_22_Unsuccessful_Login</b> is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="3"
+          author="SatishA"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_21_loginFlowValidations</p>
+            <p class="text-sm">
+              <span>4:20:44 PM</span> / <span>00:02:24:508</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">VD_TC_21_loginFlowValidations</h5>
+<span class='badge badge-success'>09.21.2025 4:20:44 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:23:09 PM</span>
+<span class='badge badge-default'>00:02:24:508</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:44 PM</td>
+        <td>
+          Test - <b>VD_TC_21_loginFlowValidations</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:20:45 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:20:53 PM</td>
+        <td>
+          The element Sign In Button is present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:20:54 PM</td>
+        <td>
+          Clicked on the element Sign In Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:21:31 PM</td>
+        <td>
+          Typed the value igstesting001@gmail.com into Email Address Text Field
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:21:32 PM</td>
+        <td>
+          The element Continue With Email Button is present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:21:33 PM</td>
+        <td>
+          Clicked on the element Continue With Email Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:22:11 PM</td>
+        <td>
+          Typed the value igs@12345 into Password Field
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:22:14 PM</td>
+        <td>
+          Clicked on Vogue CTA
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:22:15 PM</td>
+        <td>
+          The element SignIn Button is present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:22:16 PM</td>
+        <td>
+          Clicked on the element SignIn Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:23:09 PM</td>
+        <td>
+          The element Home Screen Vogue CTA is not present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:23:09 PM</td>
+        <td>
+          Test - <b>VD_TC_21_loginFlowValidations</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="4"
+          author="SatishA"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_21_loginFlowValidations</p>
+            <p class="text-sm">
+              <span>4:23:43 PM</span> / <span>00:00:00:216</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_21_loginFlowValidations</h5>
+<span class='badge badge-success'>09.21.2025 4:23:43 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:23:43 PM</span>
+<span class='badge badge-default'>00:00:00:216</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:23:43 PM</td>
+        <td>
+          Test - <b>VD_TC_21_loginFlowValidations</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:23:43 PM</td>
+        <td>
+          Test - <b>VD_TC_21_loginFlowValidations</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="5"
+          author="SatishA"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_21_loginFlowValidations</p>
+            <p class="text-sm">
+              <span>4:23:47 PM</span> / <span>00:00:00:001</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">VD_TC_21_loginFlowValidations</h5>
+<span class='badge badge-success'>09.21.2025 4:23:47 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:23:47 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:23:47 PM</td>
+        <td>
+          Test - <b>VD_TC_21_loginFlowValidations</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:23:47 PM</td>
+        <td>
+          Test - <b>VD_TC_21_loginFlowValidations</b> is failed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="6"
+          author="SatishA"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_481_voteNowValidations</p>
+            <p class="text-sm">
+              <span>4:23:51 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_481_voteNowValidations</h5>
+<span class='badge badge-success'>09.21.2025 4:23:51 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:23:51 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:23:51 PM</td>
+        <td>
+          Test - <b>VD_TC_481_voteNowValidations</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:23:51 PM</td>
+        <td>
+          Test - <b>VD_TC_481_voteNowValidations</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="7"
+          author="SatishA"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_479_voteNowBtn</p>
+            <p class="text-sm">
+              <span>4:23:55 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_479_voteNowBtn</h5>
+<span class='badge badge-success'>09.21.2025 4:23:55 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:23:55 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:23:55 PM</td>
+        <td>
+          Test - <b>VD_TC_479_voteNowBtn</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:23:55 PM</td>
+        <td>
+          Test - <b>VD_TC_479_voteNowBtn</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="8"
+          author="Shivumuni"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_480_ValidateNavigationToVotingGalleryPage</p>
+            <p class="text-sm">
+              <span>4:23:58 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_480_ValidateNavigationToVotingGalleryPage</h5>
+<span class='badge badge-success'>09.21.2025 4:23:58 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:23:58 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shivumuni</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:23:58 PM</td>
+        <td>
+          Test - <b>VD_TC_480_ValidateNavigationToVotingGalleryPage</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:23:58 PM</td>
+        <td>
+          Test - <b>VD_TC_480_ValidateNavigationToVotingGalleryPage</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="9"
+          author="Shivumuni"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_489_twoGrid</p>
+            <p class="text-sm">
+              <span>4:24:03 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_489_twoGrid</h5>
+<span class='badge badge-success'>09.21.2025 4:24:03 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:24:03 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shivumuni</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:24:03 PM</td>
+        <td>
+          Test - <b>VD_TC_489_twoGrid</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:24:03 PM</td>
+        <td>
+          Test - <b>VD_TC_489_twoGrid</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="10"
+          author="Shivumuni"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_490_viewProfileCTA</p>
+            <p class="text-sm">
+              <span>4:24:06 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_490_viewProfileCTA</h5>
+<span class='badge badge-success'>09.21.2025 4:24:06 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:24:06 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=10</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shivumuni</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:24:06 PM</td>
+        <td>
+          Test - <b>VD_TC_490_viewProfileCTA</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:24:06 PM</td>
+        <td>
+          Test - <b>VD_TC_490_viewProfileCTA</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="11"
+          author="Shivumuni"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_491_shareCTA</p>
+            <p class="text-sm">
+              <span>4:24:10 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_491_shareCTA</h5>
+<span class='badge badge-success'>09.21.2025 4:24:10 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:24:10 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=11</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shivumuni</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:24:10 PM</td>
+        <td>
+          Test - <b>VD_TC_491_shareCTA</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:24:10 PM</td>
+        <td>
+          Test - <b>VD_TC_491_shareCTA</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="12"
+          author="Shivumuni"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_443_eyeIconExpandsTermsAndConditions</p>
+            <p class="text-sm">
+              <span>4:24:14 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_443_eyeIconExpandsTermsAndConditions</h5>
+<span class='badge badge-success'>09.21.2025 4:24:14 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:24:14 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=12</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shivumuni</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:24:14 PM</td>
+        <td>
+          Test - <b>VD_TC_443_eyeIconExpandsTermsAndConditions</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:24:14 PM</td>
+        <td>
+          Test - <b>VD_TC_443_eyeIconExpandsTermsAndConditions</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="13"
+          author="Shivumuni"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_444_verifyRulesAfterClickingOnHowItWorks</p>
+            <p class="text-sm">
+              <span>4:24:18 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_444_verifyRulesAfterClickingOnHowItWorks</h5>
+<span class='badge badge-success'>09.21.2025 4:24:18 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:24:18 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shivumuni</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:24:18 PM</td>
+        <td>
+          Test - <b>VD_TC_444_verifyRulesAfterClickingOnHowItWorks</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:24:18 PM</td>
+        <td>
+          Test - <b>VD_TC_444_verifyRulesAfterClickingOnHowItWorks</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="14"
+          author="Shivumuni"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_445_verifyShutterDownAfterScrollingDown</p>
+            <p class="text-sm">
+              <span>4:24:21 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_445_verifyShutterDownAfterScrollingDown</h5>
+<span class='badge badge-success'>09.21.2025 4:24:21 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:24:21 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=14</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shivumuni</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:24:21 PM</td>
+        <td>
+          Test - <b>VD_TC_445_verifyShutterDownAfterScrollingDown</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:24:21 PM</td>
+        <td>
+          Test - <b>VD_TC_445_verifyShutterDownAfterScrollingDown</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="15"
+          author="Shivumuni"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_446_verifyGotItButtonOnEyeScreen</p>
+            <p class="text-sm">
+              <span>4:24:25 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_446_verifyGotItButtonOnEyeScreen</h5>
+<span class='badge badge-success'>09.21.2025 4:24:25 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:24:25 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=15</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shivumuni</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:24:25 PM</td>
+        <td>
+          Test - <b>VD_TC_446_verifyGotItButtonOnEyeScreen</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:24:25 PM</td>
+        <td>
+          Test - <b>VD_TC_446_verifyGotItButtonOnEyeScreen</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="16"
+          author="Shivumuni"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_447_verifyBackArrowOnQuizScreen</p>
+            <p class="text-sm">
+              <span>4:24:29 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_447_verifyBackArrowOnQuizScreen</h5>
+<span class='badge badge-success'>09.21.2025 4:24:29 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:24:29 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shivumuni</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:24:29 PM</td>
+        <td>
+          Test - <b>VD_TC_447_verifyBackArrowOnQuizScreen</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:24:29 PM</td>
+        <td>
+          Test - <b>VD_TC_447_verifyBackArrowOnQuizScreen</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="17"
+          author="Shivumuni"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_448_verifyQuizCountOnPlayQuizScreen</p>
+            <p class="text-sm">
+              <span>4:24:33 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_448_verifyQuizCountOnPlayQuizScreen</h5>
+<span class='badge badge-success'>09.21.2025 4:24:33 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:24:33 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=17</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shivumuni</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:24:33 PM</td>
+        <td>
+          Test - <b>VD_TC_448_verifyQuizCountOnPlayQuizScreen</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:24:33 PM</td>
+        <td>
+          Test - <b>VD_TC_448_verifyQuizCountOnPlayQuizScreen</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="18"
+          author="Shivumuni"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_455_verifyClickingBackButtonWhilePlayingQuiz</p>
+            <p class="text-sm">
+              <span>4:24:36 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_455_verifyClickingBackButtonWhilePlayingQuiz</h5>
+<span class='badge badge-success'>09.21.2025 4:24:36 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:24:36 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=18</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shivumuni</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:24:36 PM</td>
+        <td>
+          Test - <b>VD_TC_455_verifyClickingBackButtonWhilePlayingQuiz</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:24:36 PM</td>
+        <td>
+          Test - <b>VD_TC_455_verifyClickingBackButtonWhilePlayingQuiz</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="19"
+          author="Shivumuni"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_453_456_438_410_437_422_425_426_427_428_429_518_verifyPlayingQuiz_sharePage</p>
+            <p class="text-sm">
+              <span>4:24:40 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_453_456_438_410_437_422_425_426_427_428_429_518_verifyPlayingQuiz_sharePage</h5>
+<span class='badge badge-success'>09.21.2025 4:24:40 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:24:40 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=19</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Shivumuni</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:24:40 PM</td>
+        <td>
+          Test - <b>VD_TC_453_456_438_410_437_422_425_426_427_428_429_518_verifyPlayingQuiz_sharePage</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:24:40 PM</td>
+        <td>
+          Test - <b>VD_TC_453_456_438_410_437_422_425_426_427_428_429_518_verifyPlayingQuiz_sharePage</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="20"
+          author="Vidya"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_337_VerifyGroupChat</p>
+            <p class="text-sm">
+              <span>4:24:44 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_337_VerifyGroupChat</h5>
+<span class='badge badge-success'>09.21.2025 4:24:44 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:24:44 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=20</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Vidya</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:24:44 PM</td>
+        <td>
+          Test - <b>VD_TC_337_VerifyGroupChat</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:24:44 PM</td>
+        <td>
+          Test - <b>VD_TC_337_VerifyGroupChat</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="21"
+          author="Vidya"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_343_validateCommentingInGroupChat</p>
+            <p class="text-sm">
+              <span>4:24:48 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_343_validateCommentingInGroupChat</h5>
+<span class='badge badge-success'>09.21.2025 4:24:48 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:24:48 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=21</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Vidya</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:24:48 PM</td>
+        <td>
+          Test - <b>VD_TC_343_validateCommentingInGroupChat</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:24:48 PM</td>
+        <td>
+          Test - <b>VD_TC_343_validateCommentingInGroupChat</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="22"
+          author="Vidya"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_345_verifyReportCommentInGroupChat</p>
+            <p class="text-sm">
+              <span>4:24:51 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_345_verifyReportCommentInGroupChat</h5>
+<span class='badge badge-success'>09.21.2025 4:24:51 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:24:51 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=22</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Vidya</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:24:51 PM</td>
+        <td>
+          Test - <b>VD_TC_345_verifyReportCommentInGroupChat</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:24:51 PM</td>
+        <td>
+          Test - <b>VD_TC_345_verifyReportCommentInGroupChat</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="23"
+          author="Vidya"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_346_verifyReportOptionsForComments</p>
+            <p class="text-sm">
+              <span>4:24:55 PM</span> / <span>00:00:00:001</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_346_verifyReportOptionsForComments</h5>
+<span class='badge badge-success'>09.21.2025 4:24:55 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:24:55 PM</span>
+<span class='badge badge-default'>00:00:00:001</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=23</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Vidya</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:24:55 PM</td>
+        <td>
+          Test - <b>VD_TC_346_verifyReportOptionsForComments</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:24:55 PM</td>
+        <td>
+          Test - <b>VD_TC_346_verifyReportOptionsForComments</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="24"
+          author="Vidya"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_347_verifyReportOption</p>
+            <p class="text-sm">
+              <span>4:24:59 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_347_verifyReportOption</h5>
+<span class='badge badge-success'>09.21.2025 4:24:59 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:24:59 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=24</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Vidya</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:24:59 PM</td>
+        <td>
+          Test - <b>VD_TC_347_verifyReportOption</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:24:59 PM</td>
+        <td>
+          Test - <b>VD_TC_347_verifyReportOption</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="25"
+          author="Vidya"
+          tag="REGRESSION"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_348_reportAComment</p>
+            <p class="text-sm">
+              <span>4:25:03 PM</span> / <span>00:00:00:000</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_348_reportAComment</h5>
+<span class='badge badge-success'>09.21.2025 4:25:03 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:25:03 PM</span>
+<span class='badge badge-default'>00:00:00:000</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=25</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">Vidya</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:03 PM</td>
+        <td>
+          Test - <b>VD_TC_348_reportAComment</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:25:03 PM</td>
+        <td>
+          Test - <b>VD_TC_348_reportAComment</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="26"
+          author="SatishA"
+          tag="REGRESSION SMOKE"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_350_validatePostBottomTab</p>
+            <p class="text-sm">
+              <span>4:25:06 PM</span> / <span>00:01:48:669</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">VD_TC_350_validatePostBottomTab</h5>
+<span class='badge badge-success'>09.21.2025 4:25:06 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:26:55 PM</span>
+<span class='badge badge-default'>00:01:48:669</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=26</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">SMOKE</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:06 PM</td>
+        <td>
+          Test - <b>VD_TC_350_validatePostBottomTab</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:07 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:15 PM</td>
+        <td>
+          The element Sign In Button is present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:15 PM</td>
+        <td>
+          Clicked on the element Sign In Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:25:54 PM</td>
+        <td>
+          Typed the value saswattest71@gmail.com into Email Address Text Field
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:55 PM</td>
+        <td>
+          The element Continue With Email Button is present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:56 PM</td>
+        <td>
+          Clicked on the element Continue With Email Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:26:34 PM</td>
+        <td>
+          Typed the value Testing@123 into Password Field
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:26:36 PM</td>
+        <td>
+          Clicked on Vogue CTA
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:26:38 PM</td>
+        <td>
+          The element SignIn Button is present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:26:39 PM</td>
+        <td>
+          Clicked on the element SignIn Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:26:45 PM</td>
+        <td>
+          The element Continue Without A Passkey Link is present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:26:46 PM</td>
+        <td>
+          Clicked on the element Continue Without A Passkey Link
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:26:51 PM</td>
+        <td>
+          The element Home Screen Vogue CTA is present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:26:52 PM</td>
+        <td>
+          The element Post Bottom Tab is present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:26:52 PM</td>
+        <td>
+          Clicked on ProfileIcon
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:26:54 PM</td>
+        <td>
+          Clicked on the SettingIcon
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:26:54 PM</td>
+        <td>
+          Clicked on Signout button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:26:55 PM</td>
+        <td>
+          Clicked on yes in Signout confirmation pop up
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:26:55 PM</td>
+        <td>
+          Test - <b>VD_TC_350_validatePostBottomTab</b> is passed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="27"
+          author="SatishA"
+          tag="REGRESSION SMOKE"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_351_validateNavigationToNewPostScreen</p>
+            <p class="text-sm">
+              <span>4:26:59 PM</span> / <span>00:01:52:981</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">VD_TC_351_validateNavigationToNewPostScreen</h5>
+<span class='badge badge-success'>09.21.2025 4:26:59 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:28:52 PM</span>
+<span class='badge badge-default'>00:01:52:981</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=27</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">SMOKE</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:26:59 PM</td>
+        <td>
+          Test - <b>VD_TC_351_validateNavigationToNewPostScreen</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:27:00 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:27:08 PM</td>
+        <td>
+          The element Sign In Button is present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:27:08 PM</td>
+        <td>
+          Clicked on the element Sign In Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:27:14 PM</td>
+        <td>
+          Clicked on Sign In Another Way Link
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:27:23 PM</td>
+        <td>
+          Typed the value saswattest71@gmail.com into Email Address Text Field
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:27:24 PM</td>
+        <td>
+          The element Continue With Email Button is present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:27:25 PM</td>
+        <td>
+          Clicked on the element Continue With Email Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:28:03 PM</td>
+        <td>
+          Typed the value Testing@123 into Password Field
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:28:06 PM</td>
+        <td>
+          Clicked on Vogue CTA
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:28:07 PM</td>
+        <td>
+          The element SignIn Button is present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:28:08 PM</td>
+        <td>
+          Clicked on the element SignIn Button
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:28:14 PM</td>
+        <td>
+          The element Continue Without A Passkey Link is present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:28:15 PM</td>
+        <td>
+          Clicked on the element Continue Without A Passkey Link
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:28:20 PM</td>
+        <td>
+          The element Home Screen Vogue CTA is present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:28:21 PM</td>
+        <td>
+          Clicked on Post Bottom Tab
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:28:21 PM</td>
+        <td>
+          The element New Post Header is present
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:28:52 PM</td>
+        <td>
+          Test - <b>VD_TC_351_validateNavigationToNewPostScreen</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="28"
+          author="SatishA"
+          tag="REGRESSION SMOKE"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_351_validateNavigationToNewPostScreen</p>
+            <p class="text-sm">
+              <span>4:28:56 PM</span> / <span>00:00:33:577</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_351_validateNavigationToNewPostScreen</h5>
+<span class='badge badge-success'>09.21.2025 4:28:56 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:29:29 PM</span>
+<span class='badge badge-default'>00:00:33:577</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=28</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">SMOKE</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:28:56 PM</td>
+        <td>
+          Test - <b>VD_TC_351_validateNavigationToNewPostScreen</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:28:56 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:29:29 PM</td>
+        <td>
+          Test - <b>VD_TC_351_validateNavigationToNewPostScreen</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="29"
+          author="SatishA"
+          tag="REGRESSION SMOKE"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_351_validateNavigationToNewPostScreen</p>
+            <p class="text-sm">
+              <span>4:29:33 PM</span> / <span>00:00:33:143</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">VD_TC_351_validateNavigationToNewPostScreen</h5>
+<span class='badge badge-success'>09.21.2025 4:29:33 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:30:06 PM</span>
+<span class='badge badge-default'>00:00:33:143</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=29</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">SMOKE</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:29:33 PM</td>
+        <td>
+          Test - <b>VD_TC_351_validateNavigationToNewPostScreen</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:29:34 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:30:06 PM</td>
+        <td>
+          Test - <b>VD_TC_351_validateNavigationToNewPostScreen</b> is failed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="30"
+          author="SatishA"
+          tag="REGRESSION SMOKE"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</p>
+            <p class="text-sm">
+              <span>4:30:10 PM</span> / <span>00:00:31:222</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</h5>
+<span class='badge badge-success'>09.21.2025 4:30:10 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:30:41 PM</span>
+<span class='badge badge-default'>00:00:31:222</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">SMOKE</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:30:10 PM</td>
+        <td>
+          Test - <b>VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:30:10 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:30:41 PM</td>
+        <td>
+          Test - <b>VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="31"
+          author="SatishA"
+          tag="REGRESSION SMOKE"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</p>
+            <p class="text-sm">
+              <span>4:30:45 PM</span> / <span>00:00:33:974</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</h5>
+<span class='badge badge-success'>09.21.2025 4:30:45 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:31:19 PM</span>
+<span class='badge badge-default'>00:00:33:974</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=31</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">SMOKE</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:30:45 PM</td>
+        <td>
+          Test - <b>VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:30:46 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:31:19 PM</td>
+        <td>
+          Test - <b>VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="32"
+          author="SatishA"
+          tag="REGRESSION SMOKE"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</p>
+            <p class="text-sm">
+              <span>4:31:23 PM</span> / <span>00:00:32:994</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</h5>
+<span class='badge badge-success'>09.21.2025 4:31:23 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:31:56 PM</span>
+<span class='badge badge-default'>00:00:32:994</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=32</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">SMOKE</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:31:23 PM</td>
+        <td>
+          Test - <b>VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:31:23 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:31:56 PM</td>
+        <td>
+          Test - <b>VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</b> is failed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="33"
+          author="SatishA"
+          tag="REGRESSION SMOKE"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_353_validatePlaceHolderTextInNewPostScreen</p>
+            <p class="text-sm">
+              <span>4:31:59 PM</span> / <span>00:00:33:625</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_353_validatePlaceHolderTextInNewPostScreen</h5>
+<span class='badge badge-success'>09.21.2025 4:31:59 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:32:33 PM</span>
+<span class='badge badge-default'>00:00:33:625</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=33</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">SMOKE</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:31:59 PM</td>
+        <td>
+          Test - <b>VD_TC_353_validatePlaceHolderTextInNewPostScreen</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:32:00 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:32:33 PM</td>
+        <td>
+          Test - <b>VD_TC_353_validatePlaceHolderTextInNewPostScreen</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="34"
+          author="SatishA"
+          tag="REGRESSION SMOKE"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_353_validatePlaceHolderTextInNewPostScreen</p>
+            <p class="text-sm">
+              <span>4:32:37 PM</span> / <span>00:00:31:441</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_353_validatePlaceHolderTextInNewPostScreen</h5>
+<span class='badge badge-success'>09.21.2025 4:32:37 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:33:08 PM</span>
+<span class='badge badge-default'>00:00:31:441</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=34</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">SMOKE</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:32:37 PM</td>
+        <td>
+          Test - <b>VD_TC_353_validatePlaceHolderTextInNewPostScreen</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:32:38 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:33:08 PM</td>
+        <td>
+          Test - <b>VD_TC_353_validatePlaceHolderTextInNewPostScreen</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="35"
+          author="SatishA"
+          tag="REGRESSION SMOKE"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_353_validatePlaceHolderTextInNewPostScreen</p>
+            <p class="text-sm">
+              <span>4:33:12 PM</span> / <span>00:00:30:679</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">VD_TC_353_validatePlaceHolderTextInNewPostScreen</h5>
+<span class='badge badge-success'>09.21.2025 4:33:12 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:33:43 PM</span>
+<span class='badge badge-default'>00:00:30:679</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=35</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">SMOKE</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:33:12 PM</td>
+        <td>
+          Test - <b>VD_TC_353_validatePlaceHolderTextInNewPostScreen</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:33:13 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:33:43 PM</td>
+        <td>
+          Test - <b>VD_TC_353_validatePlaceHolderTextInNewPostScreen</b> is failed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="36"
+          author="SatishA"
+          tag="REGRESSION SMOKE"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_364_validatePostButtonInPostScreen</p>
+            <p class="text-sm">
+              <span>4:33:46 PM</span> / <span>00:00:31:481</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_364_validatePostButtonInPostScreen</h5>
+<span class='badge badge-success'>09.21.2025 4:33:46 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:34:18 PM</span>
+<span class='badge badge-default'>00:00:31:481</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=36</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">SMOKE</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:33:46 PM</td>
+        <td>
+          Test - <b>VD_TC_364_validatePostButtonInPostScreen</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:33:47 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:34:18 PM</td>
+        <td>
+          Test - <b>VD_TC_364_validatePostButtonInPostScreen</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="37"
+          author="SatishA"
+          tag="REGRESSION SMOKE"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_364_validatePostButtonInPostScreen</p>
+            <p class="text-sm">
+              <span>4:34:22 PM</span> / <span>00:00:33:924</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_364_validatePostButtonInPostScreen</h5>
+<span class='badge badge-success'>09.21.2025 4:34:22 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:34:56 PM</span>
+<span class='badge badge-default'>00:00:33:924</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=37</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">SMOKE</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:34:22 PM</td>
+        <td>
+          Test - <b>VD_TC_364_validatePostButtonInPostScreen</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:34:23 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:34:56 PM</td>
+        <td>
+          Test - <b>VD_TC_364_validatePostButtonInPostScreen</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="38"
+          author="SatishA"
+          tag="REGRESSION SMOKE"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_364_validatePostButtonInPostScreen</p>
+            <p class="text-sm">
+              <span>4:34:59 PM</span> / <span>00:00:33:210</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">VD_TC_364_validatePostButtonInPostScreen</h5>
+<span class='badge badge-success'>09.21.2025 4:34:59 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:35:33 PM</span>
+<span class='badge badge-default'>00:00:33:210</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=38</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">SMOKE</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:34:59 PM</td>
+        <td>
+          Test - <b>VD_TC_364_validatePostButtonInPostScreen</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:35:00 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:35:33 PM</td>
+        <td>
+          Test - <b>VD_TC_364_validatePostButtonInPostScreen</b> is failed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="39"
+          author="SatishA"
+          tag="REGRESSION SMOKE"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_365_validateSuccessfulPublishOfPost</p>
+            <p class="text-sm">
+              <span>4:35:36 PM</span> / <span>00:00:33:705</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_365_validateSuccessfulPublishOfPost</h5>
+<span class='badge badge-success'>09.21.2025 4:35:36 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:36:10 PM</span>
+<span class='badge badge-default'>00:00:33:705</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=39</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">SMOKE</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:35:36 PM</td>
+        <td>
+          Test - <b>VD_TC_365_validateSuccessfulPublishOfPost</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:35:37 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:36:10 PM</td>
+        <td>
+          Test - <b>VD_TC_365_validateSuccessfulPublishOfPost</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="skip" test-id="40"
+          author="SatishA"
+          tag="REGRESSION SMOKE"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_365_validateSuccessfulPublishOfPost</p>
+            <p class="text-sm">
+              <span>4:36:14 PM</span> / <span>00:00:33:899</span>
+              <span class="badge skip-bg log float-right">Skip</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-skip">VD_TC_365_validateSuccessfulPublishOfPost</h5>
+<span class='badge badge-success'>09.21.2025 4:36:14 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:36:48 PM</span>
+<span class='badge badge-default'>00:00:33:899</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=40</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">SMOKE</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:36:14 PM</td>
+        <td>
+          Test - <b>VD_TC_365_validateSuccessfulPublishOfPost</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:36:15 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log skip-bg">Skip</span></td>
+        <td>4:36:48 PM</td>
+        <td>
+          Test - <b>VD_TC_365_validateSuccessfulPublishOfPost</b> is skipped
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="41"
+          author="SatishA"
+          tag="REGRESSION SMOKE"
+          device="IOS-iPhone14">
+          <div class="test-detail">
+            <p class="name">VD_TC_365_validateSuccessfulPublishOfPost</p>
+            <p class="text-sm">
+              <span>4:36:51 PM</span> / <span>00:00:33:251</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">VD_TC_365_validateSuccessfulPublishOfPost</h5>
+<span class='badge badge-success'>09.21.2025 4:36:51 PM</span>
+<span class='badge badge-danger'>09.21.2025 4:37:25 PM</span>
+<span class='badge badge-default'>00:00:33:251</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=41</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">SatishA</span>
+<span class="badge badge-pill badge-default">REGRESSION</span>
+<span class="badge badge-pill badge-default">SMOKE</span>
+<span class="badge badge-pill badge-default">IOS-iPhone14</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:36:51 PM</td>
+        <td>
+          Test - <b>VD_TC_365_validateSuccessfulPublishOfPost</b> is started
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:36:52 PM</td>
+        <td>
+          Clicked on Skip intro video
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>4:37:25 PM</td>
+        <td>
+          Test - <b>VD_TC_365_validateSuccessfulPublishOfPost</b> is failed
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>7</span>
+<span class='badge log badge-skip'>9</span>
+</span>
+<p class="name">SMOKE</p>
+<p class="duration text-sm">16 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>SMOKE</h4>
+<span status="fail" class='badge log badge-danger'>7 failed</span>
+<span status="skip" class='badge log badge-skip'>9 skipped</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:25:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='26' id='26'>VD_TC_350_validatePostBottomTab</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:26:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='27'>VD_TC_351_validateNavigationToNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:28:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='28' id='28'>VD_TC_351_validateNavigationToNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:29:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='29' id='29'>VD_TC_351_validateNavigationToNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:30:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='30' id='30'>VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:30:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='31' id='31'>VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:31:23 PM</td>
+<td>
+<a href="#" class="linked" test-id='32' id='32'>VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:31:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='33' id='33'>VD_TC_353_validatePlaceHolderTextInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:32:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='34' id='34'>VD_TC_353_validatePlaceHolderTextInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:33:12 PM</td>
+<td>
+<a href="#" class="linked" test-id='35' id='35'>VD_TC_353_validatePlaceHolderTextInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:33:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='36' id='36'>VD_TC_364_validatePostButtonInPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:34:22 PM</td>
+<td>
+<a href="#" class="linked" test-id='37' id='37'>VD_TC_364_validatePostButtonInPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:34:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='38' id='38'>VD_TC_364_validatePostButtonInPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:35:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='39'>VD_TC_365_validateSuccessfulPublishOfPost</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:36:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='40' id='40'>VD_TC_365_validateSuccessfulPublishOfPost</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:36:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='41' id='41'>VD_TC_365_validateSuccessfulPublishOfPost</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>10</span>
+<span class='badge log badge-skip'>31</span>
+</span>
+<p class="name">REGRESSION</p>
+<p class="duration text-sm">41 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>REGRESSION</h4>
+<span status="fail" class='badge log badge-danger'>10 failed</span>
+<span status="skip" class='badge log badge-skip'>31 skipped</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:19:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>VD_TC_22_Unsuccessful_Login</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:19:42 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>VD_TC_22_Unsuccessful_Login</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:20:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>VD_TC_21_loginFlowValidations</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:23:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>VD_TC_21_loginFlowValidations</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:23:47 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>VD_TC_21_loginFlowValidations</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:23:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>VD_TC_481_voteNowValidations</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:23:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>VD_TC_479_voteNowBtn</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:23:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>VD_TC_480_ValidateNavigationToVotingGalleryPage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>VD_TC_489_twoGrid</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>VD_TC_490_viewProfileCTA</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>VD_TC_491_shareCTA</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>VD_TC_443_eyeIconExpandsTermsAndConditions</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:18 PM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>VD_TC_444_verifyRulesAfterClickingOnHowItWorks</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>VD_TC_445_verifyShutterDownAfterScrollingDown</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:25 PM</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>VD_TC_446_verifyGotItButtonOnEyeScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>VD_TC_447_verifyBackArrowOnQuizScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>VD_TC_448_verifyQuizCountOnPlayQuizScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>VD_TC_455_verifyClickingBackButtonWhilePlayingQuiz</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:40 PM</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>VD_TC_453_456_438_410_437_422_425_426_427_428_429_518_verifyPlayingQuiz_sharePage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>VD_TC_337_VerifyGroupChat</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:48 PM</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>VD_TC_343_validateCommentingInGroupChat</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='22' id='22'>VD_TC_345_verifyReportCommentInGroupChat</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='23' id='23'>VD_TC_346_verifyReportOptionsForComments</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='24' id='24'>VD_TC_347_verifyReportOption</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:25:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='25' id='25'>VD_TC_348_reportAComment</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:25:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='26' id='26'>VD_TC_350_validatePostBottomTab</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:26:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='27'>VD_TC_351_validateNavigationToNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:28:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='28' id='28'>VD_TC_351_validateNavigationToNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:29:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='29' id='29'>VD_TC_351_validateNavigationToNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:30:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='30' id='30'>VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:30:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='31' id='31'>VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:31:23 PM</td>
+<td>
+<a href="#" class="linked" test-id='32' id='32'>VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:31:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='33' id='33'>VD_TC_353_validatePlaceHolderTextInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:32:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='34' id='34'>VD_TC_353_validatePlaceHolderTextInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:33:12 PM</td>
+<td>
+<a href="#" class="linked" test-id='35' id='35'>VD_TC_353_validatePlaceHolderTextInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:33:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='36' id='36'>VD_TC_364_validatePostButtonInPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:34:22 PM</td>
+<td>
+<a href="#" class="linked" test-id='37' id='37'>VD_TC_364_validatePostButtonInPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:34:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='38' id='38'>VD_TC_364_validatePostButtonInPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:35:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='39'>VD_TC_365_validateSuccessfulPublishOfPost</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:36:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='40' id='40'>VD_TC_365_validateSuccessfulPublishOfPost</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:36:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='41' id='41'>VD_TC_365_validateSuccessfulPublishOfPost</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view device-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Device</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>10</span>
+<span class='badge log badge-skip'>31</span>
+</span>
+<p class="name">IOS-iPhone14</p>
+<p class="duration text-sm">41 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>IOS-iPhone14</h4>
+<span status="fail" class='badge log badge-danger'>10 failed</span>
+<span status="skip" class='badge log badge-skip'>31 skipped</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:19:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>VD_TC_22_Unsuccessful_Login</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:19:42 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>VD_TC_22_Unsuccessful_Login</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:20:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>VD_TC_21_loginFlowValidations</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:23:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>VD_TC_21_loginFlowValidations</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:23:47 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>VD_TC_21_loginFlowValidations</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:23:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>VD_TC_481_voteNowValidations</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:23:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>VD_TC_479_voteNowBtn</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:23:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>VD_TC_480_ValidateNavigationToVotingGalleryPage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>VD_TC_489_twoGrid</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>VD_TC_490_viewProfileCTA</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>VD_TC_491_shareCTA</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>VD_TC_443_eyeIconExpandsTermsAndConditions</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:18 PM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>VD_TC_444_verifyRulesAfterClickingOnHowItWorks</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>VD_TC_445_verifyShutterDownAfterScrollingDown</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:25 PM</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>VD_TC_446_verifyGotItButtonOnEyeScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>VD_TC_447_verifyBackArrowOnQuizScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>VD_TC_448_verifyQuizCountOnPlayQuizScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>VD_TC_455_verifyClickingBackButtonWhilePlayingQuiz</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:40 PM</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>VD_TC_453_456_438_410_437_422_425_426_427_428_429_518_verifyPlayingQuiz_sharePage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>VD_TC_337_VerifyGroupChat</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:48 PM</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>VD_TC_343_validateCommentingInGroupChat</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='22' id='22'>VD_TC_345_verifyReportCommentInGroupChat</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='23' id='23'>VD_TC_346_verifyReportOptionsForComments</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='24' id='24'>VD_TC_347_verifyReportOption</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:25:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='25' id='25'>VD_TC_348_reportAComment</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:25:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='26' id='26'>VD_TC_350_validatePostBottomTab</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:26:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='27'>VD_TC_351_validateNavigationToNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:28:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='28' id='28'>VD_TC_351_validateNavigationToNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:29:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='29' id='29'>VD_TC_351_validateNavigationToNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:30:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='30' id='30'>VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:30:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='31' id='31'>VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:31:23 PM</td>
+<td>
+<a href="#" class="linked" test-id='32' id='32'>VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:31:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='33' id='33'>VD_TC_353_validatePlaceHolderTextInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:32:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='34' id='34'>VD_TC_353_validatePlaceHolderTextInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:33:12 PM</td>
+<td>
+<a href="#" class="linked" test-id='35' id='35'>VD_TC_353_validatePlaceHolderTextInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:33:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='36' id='36'>VD_TC_364_validatePostButtonInPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:34:22 PM</td>
+<td>
+<a href="#" class="linked" test-id='37' id='37'>VD_TC_364_validatePostButtonInPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:34:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='38' id='38'>VD_TC_364_validatePostButtonInPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:35:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='39'>VD_TC_365_validateSuccessfulPublishOfPost</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:36:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='40' id='40'>VD_TC_365_validateSuccessfulPublishOfPost</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:36:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='41' id='41'>VD_TC_365_validateSuccessfulPublishOfPost</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view author-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Author</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">3</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>10</span>
+<span class='badge log badge-skip'>13</span>
+</span>
+<p class="name">SatishA</p>
+<p class="duration text-sm">23 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>SatishA</h4>
+<span status="fail" class='badge log badge-danger'>10 failed</span>
+<span status="skip" class='badge log badge-skip'>13 skipped</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:19:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>VD_TC_22_Unsuccessful_Login</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:19:42 PM</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>VD_TC_22_Unsuccessful_Login</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:20:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>VD_TC_21_loginFlowValidations</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:23:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='4' id='4'>VD_TC_21_loginFlowValidations</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:23:47 PM</td>
+<td>
+<a href="#" class="linked" test-id='5' id='5'>VD_TC_21_loginFlowValidations</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:23:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='6' id='6'>VD_TC_481_voteNowValidations</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:23:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='7' id='7'>VD_TC_479_voteNowBtn</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:25:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='26' id='26'>VD_TC_350_validatePostBottomTab</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:26:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='27' id='27'>VD_TC_351_validateNavigationToNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:28:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='28' id='28'>VD_TC_351_validateNavigationToNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:29:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='29' id='29'>VD_TC_351_validateNavigationToNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:30:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='30' id='30'>VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:30:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='31' id='31'>VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:31:23 PM</td>
+<td>
+<a href="#" class="linked" test-id='32' id='32'>VD_TC_352_validateUserNameAndProfilePicInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:31:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='33' id='33'>VD_TC_353_validatePlaceHolderTextInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:32:37 PM</td>
+<td>
+<a href="#" class="linked" test-id='34' id='34'>VD_TC_353_validatePlaceHolderTextInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:33:12 PM</td>
+<td>
+<a href="#" class="linked" test-id='35' id='35'>VD_TC_353_validatePlaceHolderTextInNewPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:33:46 PM</td>
+<td>
+<a href="#" class="linked" test-id='36' id='36'>VD_TC_364_validatePostButtonInPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:34:22 PM</td>
+<td>
+<a href="#" class="linked" test-id='37' id='37'>VD_TC_364_validatePostButtonInPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:34:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='38' id='38'>VD_TC_364_validatePostButtonInPostScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:35:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='39' id='39'>VD_TC_365_validateSuccessfulPublishOfPost</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:36:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='40' id='40'>VD_TC_365_validateSuccessfulPublishOfPost</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>16:36:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='41' id='41'>VD_TC_365_validateSuccessfulPublishOfPost</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-skip'>6</span>
+</span>
+<p class="name">Vidya</p>
+<p class="duration text-sm">6 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Vidya</h4>
+<span status="skip" class='badge log badge-skip'>6 skipped</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:44 PM</td>
+<td>
+<a href="#" class="linked" test-id='20' id='20'>VD_TC_337_VerifyGroupChat</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:48 PM</td>
+<td>
+<a href="#" class="linked" test-id='21' id='21'>VD_TC_343_validateCommentingInGroupChat</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='22' id='22'>VD_TC_345_verifyReportCommentInGroupChat</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:55 PM</td>
+<td>
+<a href="#" class="linked" test-id='23' id='23'>VD_TC_346_verifyReportOptionsForComments</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:59 PM</td>
+<td>
+<a href="#" class="linked" test-id='24' id='24'>VD_TC_347_verifyReportOption</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:25:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='25' id='25'>VD_TC_348_reportAComment</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-skip'>12</span>
+</span>
+<p class="name">Shivumuni</p>
+<p class="duration text-sm">12 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>Shivumuni</h4>
+<span status="skip" class='badge log badge-skip'>12 skipped</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:23:58 PM</td>
+<td>
+<a href="#" class="linked" test-id='8' id='8'>VD_TC_480_ValidateNavigationToVotingGalleryPage</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:03 PM</td>
+<td>
+<a href="#" class="linked" test-id='9' id='9'>VD_TC_489_twoGrid</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:06 PM</td>
+<td>
+<a href="#" class="linked" test-id='10' id='10'>VD_TC_490_viewProfileCTA</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='11' id='11'>VD_TC_491_shareCTA</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:14 PM</td>
+<td>
+<a href="#" class="linked" test-id='12' id='12'>VD_TC_443_eyeIconExpandsTermsAndConditions</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:18 PM</td>
+<td>
+<a href="#" class="linked" test-id='13' id='13'>VD_TC_444_verifyRulesAfterClickingOnHowItWorks</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='14' id='14'>VD_TC_445_verifyShutterDownAfterScrollingDown</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:25 PM</td>
+<td>
+<a href="#" class="linked" test-id='15' id='15'>VD_TC_446_verifyGotItButtonOnEyeScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:29 PM</td>
+<td>
+<a href="#" class="linked" test-id='16' id='16'>VD_TC_447_verifyBackArrowOnQuizScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='17' id='17'>VD_TC_448_verifyQuizCountOnPlayQuizScreen</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:36 PM</td>
+<td>
+<a href="#" class="linked" test-id='18' id='18'>VD_TC_455_verifyClickingBackButtonWhilePlayingQuiz</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="skip">
+<td><span class="badge log skip-bg">Skip</span></td>
+<td>16:24:40 PM</td>
+<td>
+<a href="#" class="linked" test-id='19' id='19'>VD_TC_453_456_438_410_437_422_425_426_427_428_429_518_verifyPlayingQuiz_sharePage</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Sep 21, 2025 04:18:29 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Sep 21, 2025 04:37:26 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>10</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='24%'><b>10</b> tests failed,
+<b>31</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='21%'><b>33</b> events passed</small></div>
+<div>
+<small data-tooltip='9%'><b>14</b> events failed,
+<b data-tooltip='%'>107</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"VD_TC_22_Unsuccessful_Login":37.004,"VD_TC_22_Unsuccessful_Login":27.231,"VD_TC_21_loginFlowValidations":144.508,"VD_TC_21_loginFlowValidations":0.216,"VD_TC_21_loginFlowValidations":0.001,"VD_TC_481_voteNowValidations":0,"VD_TC_479_voteNowBtn":0,"VD_TC_480_ValidateNavigationToVotingGalleryPage":0,"VD_TC_489_twoGrid":0.001,"VD_TC_490_viewProfileCTA":0,"VD_TC_491_shareCTA":0,"VD_TC_443_eyeIconExpandsTermsAndConditions":0,"VD_TC_444_verifyRulesAfterClickingOnHowItWorks":0.001,"VD_TC_445_verifyShutterDownAfterScrollingDown":0,"VD_TC_446_verifyGotItButtonOnEyeScreen":0,"VD_TC_447_verifyBackArrowOnQuizScreen":0.001,"VD_TC_448_verifyQuizCountOnPlayQuizScreen":0.001,"VD_TC_455_verifyClickingBackButtonWhilePlayingQuiz":0.001,"VD_TC_453_456_438_410_437_422_425_426_427_428_429_518_verifyPlayingQuiz_sharePage":0.001,"VD_TC_337_VerifyGroupChat":0,"VD_TC_343_validateCommentingInGroupChat":0.001,"VD_TC_345_verifyReportCommentInGroupChat":0.001,"VD_TC_346_verifyReportOptionsForComments":0.001,"VD_TC_347_verifyReportOption":0,"VD_TC_348_reportAComment":0,"VD_TC_350_validatePostBottomTab":108.669,"VD_TC_351_validateNavigationToNewPostScreen":112.981,"VD_TC_351_validateNavigationToNewPostScreen":33.577,"VD_TC_351_validateNavigationToNewPostScreen":33.143,"VD_TC_352_validateUserNameAndProfilePicInNewPostScreen":31.222,"VD_TC_352_validateUserNameAndProfilePicInNewPostScreen":33.974,"VD_TC_352_validateUserNameAndProfilePicInNewPostScreen":32.994,"VD_TC_353_validatePlaceHolderTextInNewPostScreen":33.625,"VD_TC_353_validatePlaceHolderTextInNewPostScreen":31.441,"VD_TC_353_validatePlaceHolderTextInNewPostScreen":30.679,"VD_TC_364_validatePostButtonInPostScreen":31.481,"VD_TC_364_validatePostButtonInPostScreen":33.924,"VD_TC_364_validatePostButtonInPostScreen":33.21,"VD_TC_365_validateSuccessfulPublishOfPost":33.705,"VD_TC_365_validateSuccessfulPublishOfPost":33.899,"VD_TC_365_validateSuccessfulPublishOfPost":33.251
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 author-container">
+<div class="card">
+<div class="card-header"><p>Author</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>SatishA</td>
+<td>0</td>
+<td>10</td>
+<td>13</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>Vidya</td>
+<td>0</td>
+<td>0</td>
+<td>6</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>Shivumuni</td>
+<td>0</td>
+<td>0</td>
+<td>12</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>SMOKE</td>
+<td>0</td>
+<td>7</td>
+<td>9</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>REGRESSION</td>
+<td>0</td>
+<td>10</td>
+<td>31</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 device-container">
+<div class="card">
+<div class="card-header"><p>Device</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>IOS-iPhone14</td>
+<td>0</td>
+<td>10</td>
+<td>31</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Host Name</td>
+<td>mac.lan</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>TNY Mobile Automation - Appium</td>
+</tr>
+<tr>
+<td>User Name</td>
+<td>satish_amaravathi</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 10,
+warningParent: 0,
+skipParent: 31,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 33,
+failEvents: 14,
+warningEvents: 0,
+skipEvents: 33,
+infoEvents: 74
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
