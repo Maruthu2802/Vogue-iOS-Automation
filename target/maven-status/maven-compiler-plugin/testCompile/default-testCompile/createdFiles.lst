@@ -1,0 +1,12 @@
+com/Tests/UpdateNowvalidation_Tests.class
+com/Tests/DiscoverScreenvalidation_Tests.class
+com/Tests/NewyorkerSampleTest.class
+com/Tests/ListenScreenvalidation_Tests.class
+com/Tests/PlayTabScreenvalidation_Tests.class
+com/Tests/MyLibraryScreenvalidation_Tests.class
+com/Tests/SettingScrennvalidation_Tests.class
+com/Tests/TopStoriesScreenvalidation_Tests.class
+com/Tests/FTUEScreenvalidation_Tests.class
+com/Tests/CentenaryIconvalidation_Tests.class
+com/Tests/MagazineScreenvalidation_Tests.class
+Base/Baseclass.class

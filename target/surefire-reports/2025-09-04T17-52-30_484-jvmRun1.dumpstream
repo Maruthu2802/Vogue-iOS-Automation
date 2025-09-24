@@ -1,0 +1,828 @@
+# Created at 2025-09-04T17:52:35.649
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m Welcome to Appium v3.0.0'.
+
+# Created at 2025-09-04T17:52:35.651
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m Non-default server args:'.
+
+# Created at 2025-09-04T17:52:35.653
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m { basePath: [32m'/wd/hub'[39m, port:'.
+
+# Created at 2025-09-04T17:52:35.655
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[33m4724[39m }'.
+
+# Created at 2025-09-04T17:52:35.658
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m The autodetected Appium home path: /Users/svadivel/.appium'.
+
+# Created at 2025-09-04T17:52:35.659
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m Attempting to load driver uiautomator2...'.
+
+# Created at 2025-09-04T17:52:35.660
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m Attempting to load driver xcuitest...'.
+
+# Created at 2025-09-04T17:52:35.662
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m Requiring driver at /Users/svadivel/.appium/node_modules/appium-uiautomator2-driver/build/index.js'.
+
+# Created at 2025-09-04T17:52:37.407
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m AndroidUiautomator2Driver has been successfully loaded in 1.754s'.
+
+# Created at 2025-09-04T17:52:37.409
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m Requiring driver at /Users/svadivel/.appium/node_modules/appium-xcuitest-driver/build/index.js'.
+
+# Created at 2025-09-04T17:52:39.532
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m XCUITestDriver has been successfully loaded in 3.879s'.
+
+# Created at 2025-09-04T17:52:39.572
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m Appium REST http interface listener started on http://0.0.0.0:'.
+
+# Created at 2025-09-04T17:52:39.574
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '4724/wd/hub'.
+
+# Created at 2025-09-04T17:52:39.576
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m You can provide the following URLs in your client code to connect to this server:'.
+
+# Created at 2025-09-04T17:52:39.577
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'http://127.0.0.1:'.
+
+# Created at 2025-09-04T17:52:39.579
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '4724/wd/hub (only accessible from the same host)'.
+
+# Created at 2025-09-04T17:52:39.581
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'http://10.176.96.127:'.
+
+# Created at 2025-09-04T17:52:39.583
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '4724/wd/hub'.
+
+# Created at 2025-09-04T17:52:39.586
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'http://169.254.84.69:'.
+
+# Created at 2025-09-04T17:52:39.589
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '4724/wd/hub'.
+
+# Created at 2025-09-04T17:52:39.591
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m Available drivers:'.
+
+# Created at 2025-09-04T17:52:39.593
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m   - uiautomator2@5.0.0 (automationName 'UiAutomator2')'.
+
+# Created at 2025-09-04T17:52:39.595
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m   - xcuitest@10.0.0 (automationName 'XCUITest')'.
+
+# Created at 2025-09-04T17:52:39.597
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m No plugins have been installed. Use the "appium plugin" command to install the one(s) you want to use.'.
+
+# Created at 2025-09-04T17:52:40.022
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;86m[HTTP][0m [37m-->[39m [37mGET[39m [37m/wd/hub/status[39m [90m[39m'.
+
+# Created at 2025-09-04T17:52:40.027
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;75m[AppiumDriver@4e2f][0m Calling AppiumDriver.getStatus() with args: []'.
+
+# Created at 2025-09-04T17:52:40.029
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;75m[AppiumDriver@4e2f][0m Responding to client with driver.getStatus() result: {"ready":'.
+
+# Created at 2025-09-04T17:52:40.030
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'true,"message":"The server is ready to accept new connections","build":'.
+
+# Created at 2025-09-04T17:52:40.031
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '{"version":"3.0.0"}}'.
+
+# Created at 2025-09-04T17:52:40.035
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;86m[HTTP][0m [37m<-- GET /wd/hub/status [39m[32m200[39m [90m12 ms - 110[39m [90m[39m'.
+
+# Created at 2025-09-04T17:52:40.636
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;86m[HTTP][0m Request idempotency key: c85c0232-f3a3-4570-94c5-8cf42931705b'.
+
+# Created at 2025-09-04T17:52:40.655
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m [90m{"desiredCapabilities":{"noReset":'.
+
+# Created at 2025-09-04T17:52:40.656
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'true,"platformVersion":"16.4.1","automationName":'.
+
+# Created at 2025-09-04T17:52:40.657
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"XCUITest","bundleId":"com.condenet.newyorker.today","platformName":'.
+
+# Created at 2025-09-04T17:52:40.658
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"IOS","udid":"00008110-000E69481450401E","deviceName":'.
+
+# Created at 2025-09-04T17:52:40.659
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"IGS iPhone","fullReset":false},"capabilities":'.
+
+# Created at 2025-09-04T17:52:40.661
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '{"firstMatch":[{"appium:'.
+
+# Created at 2025-09-04T17:52:40.664
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'automationName":"XCUITest","appium:'.
+
+# Created at 2025-09-04T17:52:40.667
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'bundleId":"com.condenet.newyorker.today","appium:'.
+
+# Created at 2025-09-04T17:52:40.669
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'deviceName":"IGS iPhone","appium:'.
+
+# Created at 2025-09-04T17:52:40.671
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'fullReset":false,"appium:'.
+
+# Created at 2025-09-04T17:52:40.672
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'noReset":true,"platformName":'.
+
+# Created at 2025-09-04T17:52:40.674
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"ios","appium:platformVersion":'.
+
+# Created at 2025-09-04T17:52:40.676
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"16.4.1","appium:udid":'.
+
+# Created at 2025-09-04T17:52:40.677
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"00008110-000E69481450401E"}]}}[39m'.
+
+# Created at 2025-09-04T17:52:40.679
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;123m[BaseDriver][0m The following arguments are not known and will be ignored: desiredCapabilities'.
+
+# Created at 2025-09-04T17:52:40.681
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;75m[AppiumDriver@4e2f][0m Calling AppiumDriver.createSession() with args: [{"firstMatch":'.
+
+# Created at 2025-09-04T17:52:40.682
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[{"appium:automationName":'.
+
+# Created at 2025-09-04T17:52:40.686
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"XCUITest","appium:bundleId":'.
+
+# Created at 2025-09-04T17:52:40.687
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"com.condenet.newyorker.today","appium:deviceName":'.
+
+# Created at 2025-09-04T17:52:40.688
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"IGS iPhone","appium:fullReset":'.
+
+# Created at 2025-09-04T17:52:40.689
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'false,"appium:noReset":'.
+
+# Created at 2025-09-04T17:52:40.690
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'true,"platformName":"ios","appium:'.
+
+# Created at 2025-09-04T17:52:40.691
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'platformVersion":"16.4.1","appium:'.
+
+# Created at 2025-09-04T17:52:40.695
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'udid":"00008110-000E69481450401E"}]},{"firstMatch":'.
+
+# Created at 2025-09-04T17:52:40.698
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[{"appium:automationName":'.
+
+# Created at 2025-09-04T17:52:40.700
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"XCUITest","appium:bundleId":'.
+
+# Created at 2025-09-04T17:52:40.702
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"com.condenet.newyorker.today","appium:deviceName":'.
+
+# Created at 2025-09-04T17:52:40.704
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"IGS iPhone","appium:fullReset":'.
+
+# Created at 2025-09-04T17:52:40.706
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'false,"appium:noReset":'.
+
+# Created at 2025-09-04T17:52:40.707
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'true,"platformName":"ios","appium:'.
+
+# Created at 2025-09-04T17:52:40.710
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'platformVersion":"16.4.1","appium:'.
+
+# Created at 2025-09-04T17:52:40.712
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'udid":"00008110-000E69481450401E"}]},{"firstMatch":'.
+
+# Created at 2025-09-04T17:52:40.713
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[{"appium:automationName":'.
+
+# Created at 2025-09-04T17:52:40.714
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"XCUITest","appium:bundleId":'.
+
+# Created at 2025-09-04T17:52:40.715
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"com.condenet.newyorker.today","appium:deviceName":'.
+
+# Created at 2025-09-04T17:52:40.716
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"IGS iPhone","appium:fullReset":'.
+
+# Created at 2025-09-04T17:52:40.719
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'false,"appium:noReset":'.
+
+# Created at 2025-09-04T17:52:40.720
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'true,"platformName":"ios","appium:'.
+
+# Created at 2025-09-04T17:52:40.721
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'platformVersion":"16.4.1","appium:'.
+
+# Created at 2025-09-04T17:52:40.722
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'udid":"00008110-000E69481450401E"}]}]'.
+
+# Created at 2025-09-04T17:52:40.724
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;75m[AppiumDriver@4e2f][0m Event 'newSessionRequested' logged at 1756988560655 (17:52:'.
+
+# Created at 2025-09-04T17:52:40.728
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '40 GMT+0530 (India Standard Time))'.
+
+# Created at 2025-09-04T17:52:40.730
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m Attempting to find matching driver for automationName 'XCUITest' and platformName 'ios''.
+
+# Created at 2025-09-04T17:52:40.731
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m The 'xcuitest' driver was installed and matched caps.'.
+
+# Created at 2025-09-04T17:52:40.732
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m Will require it at /Users/svadivel/.appium/node_modules/appium-xcuitest-driver'.
+
+# Created at 2025-09-04T17:52:40.733
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m Requiring driver at /Users/svadivel/.appium/node_modules/appium-xcuitest-driver/build/index.js'.
+
+# Created at 2025-09-04T17:52:40.734
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;75m[AppiumDriver@4e2f][0m Appium v3.0.0 creating new XCUITestDriver (v10.0.0) session'.
+
+# Created at 2025-09-04T17:52:40.736
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;75m[AppiumDriver@4e2f][0m Checking BaseDriver versions for Appium and XCUITestDriver'.
+
+# Created at 2025-09-04T17:52:40.737
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;75m[AppiumDriver@4e2f][0m Appium's BaseDriver version is 10.0.0'.
+
+# Created at 2025-09-04T17:52:40.737
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;75m[AppiumDriver@4e2f][0m XCUITestDriver's BaseDriver version is 10.0.0'.
+
+# Created at 2025-09-04T17:52:40.738
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;79m[XCUITestDriver@b9c2][0m'.
+
+# Created at 2025-09-04T17:52:40.741
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;79m[XCUITestDriver@b9c2][0m Creating session with W3C capabilities: {'.
+
+# Created at 2025-09-04T17:52:40.742
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"alwaysMatch": {'.
+
+# Created at 2025-09-04T17:52:40.744
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"platformName": "ios",'.
+
+# Created at 2025-09-04T17:52:40.745
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"appium:automationName":'.
+
+# Created at 2025-09-04T17:52:40.745
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"XCUITest",'.
+
+# Created at 2025-09-04T17:52:40.747
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"appium:bundleId":'.
+
+# Created at 2025-09-04T17:52:40.748
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"com.condenet.newyorker.today",'.
+
+# Created at 2025-09-04T17:52:40.748
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"appium:deviceName":'.
+
+# Created at 2025-09-04T17:52:40.749
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"IGS iPhone",'.
+
+# Created at 2025-09-04T17:52:40.751
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"appium:fullReset":'.
+
+# Created at 2025-09-04T17:52:40.752
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'false,'.
+
+# Created at 2025-09-04T17:52:40.753
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"appium:noReset":'.
+
+# Created at 2025-09-04T17:52:40.754
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'true,'.
+
+# Created at 2025-09-04T17:52:40.756
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"appium:platformVersion":'.
+
+# Created at 2025-09-04T17:52:40.758
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"16.4.1",'.
+
+# Created at 2025-09-04T17:52:40.760
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"appium:udid":'.
+
+# Created at 2025-09-04T17:52:40.761
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"00008110-000E69481450401E"'.
+
+# Created at 2025-09-04T17:52:40.762
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '},'.
+
+# Created at 2025-09-04T17:52:40.763
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"firstMatch": ['.
+
+# Created at 2025-09-04T17:52:40.765
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '{}'.
+
+# Created at 2025-09-04T17:52:40.766
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream ']'.
+
+# Created at 2025-09-04T17:52:40.767
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '}'.
+
+# Created at 2025-09-04T17:52:40.768
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Session created with session id: 6a6e4d12-068a-493d-b92c-d5a9acc6a25d'.
+
+# Created at 2025-09-04T17:52:40.769
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;135m[XCUITest][0m Current user: 'svadivel''.
+
+# Created at 2025-09-04T17:52:40.770
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Available real devices: 00008110-000E69481450401E'.
+
+# Created at 2025-09-04T17:52:40.772
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Creating iDevice object with udid '00008110-000E69481450401E''.
+
+# Created at 2025-09-04T17:52:40.773
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Determining device to run tests on: udid:'.
+
+# Created at 2025-09-04T17:52:40.774
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream ''00008110-000E69481450401E', real device: true'.
+
+# Created at 2025-09-04T17:52:40.776
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Normalized platformVersion capability value '16.4.1' to '16.4''.
+
+# Created at 2025-09-04T17:52:40.784
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Event 'xcodeDetailsRetrieved' logged at 1756988560780 (17:52:'.
+
+# Created at 2025-09-04T17:52:40.786
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '40 GMT+0530 (India Standard Time))'.
+
+# Created at 2025-09-04T17:52:40.787
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Event 'appConfigured' logged at 1756988560784 (17:52:'.
+
+# Created at 2025-09-04T17:52:40.788
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '40 GMT+0530 (India Standard Time))'.
+
+# Created at 2025-09-04T17:52:40.791
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Event 'resetStarted' logged at 1756988560786 (17:52:'.
+
+# Created at 2025-09-04T17:52:40.792
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '40 GMT+0530 (India Standard Time))'.
+
+# Created at 2025-09-04T17:52:40.795
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Reset: fullReset not set. Leaving as is'.
+
+# Created at 2025-09-04T17:52:40.797
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Event 'resetComplete' logged at 1756988560786 (17:52:'.
+
+# Created at 2025-09-04T17:52:40.798
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '40 GMT+0530 (India Standard Time))'.
+
+# Created at 2025-09-04T17:52:40.799
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Using WDA path: '/Users/svadivel/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent''.
+
+# Created at 2025-09-04T17:52:40.801
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Using WDA agent: '/Users/svadivel/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent/WebDriverAgent.xcodeproj''.
+
+# Created at 2025-09-04T17:52:40.802
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m The pyidevice tool is not present in PATH. Skipping crash logs collection for real devices.'.
+
+# Created at 2025-09-04T17:52:41.037
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Event 'logCaptureStarted' logged at 1756988561034 (17:52:'.
+
+# Created at 2025-09-04T17:52:41.038
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '41 GMT+0530 (India Standard Time))'.
+
+# Created at 2025-09-04T17:52:41.039
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Setting up real device'.
+
+# Created at 2025-09-04T17:52:41.306
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m No obsolete cached processes from previous WDA sessions listening on port 8100 have been found'.
+
+# Created at 2025-09-04T17:52:41.308
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;23m[DevCon Factory][0m Requesting connection for device 00008110-000E69481450401E on local port 8100, device port 8100'.
+
+# Created at 2025-09-04T17:52:41.310
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;23m[DevCon Factory][0m Cached connections count: 0'.
+
+# Created at 2025-09-04T17:52:41.311
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;23m[DevCon Factory][0m Successfully requested the connection for 00008110-000E69481450401E:8100'.
+
+# Created at 2025-09-04T17:52:41.313
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Starting WebDriverAgent initialization with the synchronization key 'XCUITestDriver''.
+
+# Created at 2025-09-04T17:52:41.314
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;151m[WD Proxy][0m NoSessionProxy options: {"server":'.
+
+# Created at 2025-09-04T17:52:41.316
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"127.0.0.1","port":"8100","base":'.
+
+# Created at 2025-09-04T17:52:41.317
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"","timeout":3000,"scheme":'.
+
+# Created at 2025-09-04T17:52:41.318
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"http","reqBasePath":"","sessionId":'.
+
+# Created at 2025-09-04T17:52:41.319
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'null}'.
+
+# Created at 2025-09-04T17:52:41.320
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;151m[WD Proxy][0m Matched '/status' to command name 'getStatus''.
+
+# Created at 2025-09-04T17:52:41.322
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;151m[WD Proxy][0m Proxying [GET /status] to [GET http://127.0.0.1:'.
+
+# Created at 2025-09-04T17:52:41.325
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '8100/status] with no body'.
+
+# Created at 2025-09-04T17:52:41.333
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;151m[WD Proxy][0m Got response with status 200: {"value":'.
+
+# Created at 2025-09-04T17:52:41.334
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '{"build":{"version":'.
+
+# Created at 2025-09-04T17:52:41.335
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"10.0.0","time":"Aug 22 2025 13:'.
+
+# Created at 2025-09-04T17:52:41.337
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '07:31","productBundleIdentifier":'.
+
+# Created at 2025-09-04T17:52:41.338
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"com.facebook.WebDriverAgentRunner"},"os":{"testmanagerdVersion":'.
+
+# Created at 2025-09-04T17:52:41.340
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '65535,"name":"iOS","sdkVersion":'.
+
+# Created at 2025-09-04T17:52:41.341
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"18.0","version":"16.4.1"},"device":'.
+
+# Created at 2025-09-04T17:52:41.342
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"iphone","ios":{"ip":'.
+
+# Created at 2025-09-04T17:52:41.343
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"10.176.116.96"},"message":"WebDriverAgent is ready to accept commands","state":'.
+
+# Created at 2025-09-04T17:52:41.344
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"success","ready":true},"sessionId":'.
+
+# Created at 2025-09-04T17:52:41.345
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'null}'.
+
+# Created at 2025-09-04T17:52:41.348
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Upgrade timestamp of the currently bundled WDA: 1755684184411'.
+
+# Created at 2025-09-04T17:52:41.350
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Upgrade timestamp of the WDA on the device: undefined'.
+
+# Created at 2025-09-04T17:52:41.351
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Will reuse previously cached WDA instance at 'http://127.0.0.1:'.
+
+# Created at 2025-09-04T17:52:41.352
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '8100/' with 'com.facebook.WebDriverAgentRunner'. Set the wdaLocalPort capability to a value different from 8100 if this is an undesired behavior.'.
+
+# Created at 2025-09-04T17:52:41.352
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Trying to start WebDriverAgent 1 times with 10000ms interval'.
+
+# Created at 2025-09-04T17:52:41.353
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m These values can be customized by changing wdaStartupRetries/wdaStartupRetryInterval capabilities'.
+
+# Created at 2025-09-04T17:52:41.354
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Event 'wdaStartAttempted' logged at 1756988561333 (17:52:'.
+
+# Created at 2025-09-04T17:52:41.354
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '41 GMT+0530 (India Standard Time))'.
+
+# Created at 2025-09-04T17:52:41.355
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Using provided WebdriverAgent at 'http://127.0.0.1:'.
+
+# Created at 2025-09-04T17:52:41.355
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '8100/''.
+
+# Created at 2025-09-04T17:52:41.357
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m JWProxy options: {"scheme":'.
+
+# Created at 2025-09-04T17:52:41.358
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"http","server":"127.0.0.1","port":'.
+
+# Created at 2025-09-04T17:52:41.358
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '8100,"base":"","timeout":'.
+
+# Created at 2025-09-04T17:52:41.358
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '240000,"keepAlive":true,"reqBasePath":'.
+
+# Created at 2025-09-04T17:52:41.359
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"","sessionId":null}'.
+
+# Created at 2025-09-04T17:52:41.360
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m NoSessionProxy options: {"scheme":'.
+
+# Created at 2025-09-04T17:52:41.361
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"http","server":"127.0.0.1","port":'.
+
+# Created at 2025-09-04T17:52:41.361
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '8100,"base":"","timeout":'.
+
+# Created at 2025-09-04T17:52:41.362
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '240000,"keepAlive":true,"reqBasePath":'.
+
+# Created at 2025-09-04T17:52:41.362
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"","sessionId":null}'.
+
+# Created at 2025-09-04T17:52:41.362
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;151m[WD Proxy][0m NoSessionProxy options: {"server":'.
+
+# Created at 2025-09-04T17:52:41.363
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"127.0.0.1","port":"8100","base":'.
+
+# Created at 2025-09-04T17:52:41.363
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"","timeout":3000,"scheme":'.
+
+# Created at 2025-09-04T17:52:41.363
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"http","reqBasePath":"","sessionId":'.
+
+# Created at 2025-09-04T17:52:41.364
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'null}'.
+
+# Created at 2025-09-04T17:52:41.364
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;151m[WD Proxy][0m Matched '/status' to command name 'getStatus''.
+
+# Created at 2025-09-04T17:52:41.364
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;151m[WD Proxy][0m Proxying [GET /status] to [GET http://127.0.0.1:'.
+
+# Created at 2025-09-04T17:52:41.365
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '8100/status] with no body'.
+
+# Created at 2025-09-04T17:52:41.365
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;151m[WD Proxy][0m Got response with status 200: {"value":'.
+
+# Created at 2025-09-04T17:52:41.367
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '{"build":{"version":'.
+
+# Created at 2025-09-04T17:52:41.368
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"10.0.0","time":"Aug 22 2025 13:'.
+
+# Created at 2025-09-04T17:52:41.368
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '07:31","productBundleIdentifier":'.
+
+# Created at 2025-09-04T17:52:41.369
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"com.facebook.WebDriverAgentRunner"},"os":{"testmanagerdVersion":'.
+
+# Created at 2025-09-04T17:52:41.369
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '65535,"name":"iOS","sdkVersion":'.
+
+# Created at 2025-09-04T17:52:41.369
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"18.0","version":"16.4.1"},"device":'.
+
+# Created at 2025-09-04T17:52:41.370
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"iphone","ios":{"ip":'.
+
+# Created at 2025-09-04T17:52:41.370
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"10.176.116.96"},"message":"WebDriverAgent is ready to accept commands","state":'.
+
+# Created at 2025-09-04T17:52:41.371
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"success","ready":true},"sessionId":'.
+
+# Created at 2025-09-04T17:52:41.372
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'null}'.
+
+# Created at 2025-09-04T17:52:41.372
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Event 'wdaSessionAttempted' logged at 1756988561345 (17:52:'.
+
+# Created at 2025-09-04T17:52:41.373
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '41 GMT+0530 (India Standard Time))'.
+
+# Created at 2025-09-04T17:52:41.373
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Sending createSession command to WDA'.
+
+# Created at 2025-09-04T17:52:41.374
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Matched '/session' to command name 'createSession''.
+
+# Created at 2025-09-04T17:52:41.374
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Proxying [POST /session] to [POST http://127.0.0.1:'.
+
+# Created at 2025-09-04T17:52:41.374
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '8100/session] with body: {"capabilities":'.
+
+# Created at 2025-09-04T17:52:41.374
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '{"firstMatch":[{"bundleId":'.
+
+# Created at 2025-09-04T17:52:41.375
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"com.condenet.newyorker.today","arguments":[],"environment":'.
+
+# Created at 2025-09-04T17:52:41.375
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '{},"eventloopIdleDelaySec":0,"shouldWaitForQuiescence":'.
+
+# Created at 2025-09-04T17:52:41.375
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'true,"shouldUseTestManagerForVisibilityDetection":false,"maxTypingFrequency":'.
+
+# Created at 2025-09-04T17:52:41.376
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '60,"shouldUseSingletonTestManager":true,"shouldTerminateApp":'.
+
+# Created at 2025-09-04T17:52:41.376
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'false,"forceAppLaunch":false,"useNativeCachingStrategy":'.
+
+# Created at 2025-09-04T17:52:41.376
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'true,"forceSimulatorSoftwareKeyboardPresence":true}],"alwaysMatch":'.
+
+# Created at 2025-09-04T17:52:41.377
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '{}}}'.
+
+# Created at 2025-09-04T17:52:42.653
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Got response with status 200: {"value":'.
+
+# Created at 2025-09-04T17:52:42.653
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '{"sessionId":"A607295D-0F6C-4D45-8404-10FBB286668F","capabilities":'.
+
+# Created at 2025-09-04T17:52:42.654
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '{"sdkVersion":"16.4.1","device":'.
+
+# Created at 2025-09-04T17:52:42.654
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"iphone"}},"sessionId":"A607295D-0F6C-4D45-8404-10FBB286668F"}'.
+
+# Created at 2025-09-04T17:52:42.655
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Determined the downstream protocol as 'W3C''.
+
+# Created at 2025-09-04T17:52:42.656
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m WDA session startup took 1307ms'.
+
+# Created at 2025-09-04T17:52:42.656
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Event 'wdaSessionStarted' logged at 1756988562652 (17:52:'.
+
+# Created at 2025-09-04T17:52:42.657
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '42 GMT+0530 (India Standard Time))'.
+
+# Created at 2025-09-04T17:52:42.657
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m WebDriverAgent version: '10.0.0''.
+
+# Created at 2025-09-04T17:52:42.658
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Event 'wdaStarted' logged at 1756988562652 (17:52:'.
+
+# Created at 2025-09-04T17:52:42.658
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '42 GMT+0530 (India Standard Time))'.
+
+# Created at 2025-09-04T17:52:42.661
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;123m[BaseDriver][0m The value of 'elementResponseAttributes' setting did not change. Skipping the update for it'.
+
+# Created at 2025-09-04T17:52:42.662
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;123m[BaseDriver][0m The value of 'shouldUseCompactResponses' setting did not change. Skipping the update for it'.
+
+# Created at 2025-09-04T17:52:42.662
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Forwarding MJPEG server port 9100 to local port 9100'.
+
+# Created at 2025-09-04T17:52:42.663
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;23m[DevCon Factory][0m Requesting connection for device 00008110-000E69481450401E on local port 9100, device port 9100'.
+
+# Created at 2025-09-04T17:52:42.663
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;23m[DevCon Factory][0m Cached connections count: 1'.
+
+# Created at 2025-09-04T17:52:42.664
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;23m[DevCon Factory][0m Successfully requested the connection for 00008110-000E69481450401E:9100'.
+
+# Created at 2025-09-04T17:52:42.664
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;75m[AppiumDriver@4e2f][0m New XCUITestDriver session created successfully, session 6a6e4d12-068a-493d-b92c-d5a9acc6a25d added to master session list'.
+
+# Created at 2025-09-04T17:52:42.665
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;75m[AppiumDriver@4e2f][0m Event 'newSessionStarted' logged at 1756988562656 (17:52:'.
+
+# Created at 2025-09-04T17:52:42.666
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '42 GMT+0530 (India Standard Time))'.
+
+# Created at 2025-09-04T17:52:42.667
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Cached the protocol value 'W3C' for the new session 6a6e4d12-068a-493d-b92c-d5a9acc6a25d'.
+
+# Created at 2025-09-04T17:52:42.667
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Responding to client with driver.createSession() result: {"capabilities":'.
+
+# Created at 2025-09-04T17:52:42.668
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '{"webStorageEnabled":false,"locationContextEnabled":'.
+
+# Created at 2025-09-04T17:52:42.669
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'false,"browserName":"","platform":'.
+
+# Created at 2025-09-04T17:52:42.669
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"MAC","javascriptEnabled":true,"databaseEnabled":'.
+
+# Created at 2025-09-04T17:52:42.670
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'false,"takesScreenshot":true,"networkConnectionEnabled":'.
+
+# Created at 2025-09-04T17:52:42.671
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'false,"platformName":"ios","automationName":'.
+
+# Created at 2025-09-04T17:52:42.671
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"XCUITest","bundleId":"com.condenet.newyorker.today","deviceName":'.
+
+# Created at 2025-09-04T17:52:42.672
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"IGS iPhone","fullReset":false,"noReset":'.
+
+# Created at 2025-09-04T17:52:42.672
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'true,"platformVersion":"16.4","udid":'.
+
+# Created at 2025-09-04T17:52:42.673
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"00008110-000E69481450401E"}}'.
+
+# Created at 2025-09-04T17:52:42.673
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;86m[HTTP][0m [37m<-- POST /wd/hub/session [39m[32m200[39m [90m2005 ms - 485[39m [90m[39m'.
+
+# Created at 2025-09-04T17:52:42.845
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/6a6e4d12-068a-493d-b92c-d5a9acc6a25d/appium/device/terminate_app[39m [90m{"bundleId":"com.condenet.newyorker.today"}[39m'.
+
+# Created at 2025-09-04T17:52:42.852
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Calling AppiumDriver.terminateApp() with args: ["com.condenet.newyorker.today",null,"6a6e4d12-068a-493d-b92c-d5a9acc6a25d"]'.
+
+# Created at 2025-09-04T17:52:42.855
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Executing command 'terminateApp''.
+
+# Created at 2025-09-04T17:52:42.869
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Proxying [POST /wda/apps/terminate] to [POST http://127.0.0.1:'.
+
+# Created at 2025-09-04T17:52:42.871
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '8100/session/A607295D-0F6C-4D45-8404-10FBB286668F/wda/apps/terminate] with body: {"bundleId":'.
+
+# Created at 2025-09-04T17:52:42.872
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '"com.condenet.newyorker.today"}'.
+
+# Created at 2025-09-04T17:52:43.474
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Parsed BUILD_DIR configuration value: '/Users/svadivel/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent/build''.
+
+# Created at 2025-09-04T17:52:43.476
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Got derived data root: '/Users/svadivel/.appium/node_modules/appium-xcuitest-driver/node_modules''.
+
+# Created at 2025-09-04T17:52:43.918
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Got response with status 200: {"value":'.
+
+# Created at 2025-09-04T17:52:43.920
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'true,"sessionId":"A607295D-0F6C-4D45-8404-10FBB286668F"}'.
+
+# Created at 2025-09-04T17:52:43.927
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Responding to client with driver.terminateApp() result: true'.
+
+# Created at 2025-09-04T17:52:43.932
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;86m[HTTP][0m [37m<-- POST /wd/hub/session/6a6e4d12-068a-493d-b92c-d5a9acc6a25d/appium/device/terminate_app [39m[32m200[39m [90m1075 ms - 14[39m [90m[39m'.
+
+# Created at 2025-09-04T17:52:43.942
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;86m[HTTP][0m [37m-->[39m [37mDELETE[39m [37m/wd/hub/session/6a6e4d12-068a-493d-b92c-d5a9acc6a25d[39m [90m{}[39m'.
+
+# Created at 2025-09-04T17:52:43.946
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Calling AppiumDriver.deleteSession() with args: ["6a6e4d12-068a-493d-b92c-d5a9acc6a25d"]'.
+
+# Created at 2025-09-04T17:52:43.949
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;75m[AppiumDriver@4e2f][0m Event 'quitSessionRequested' logged at 1756988563938 (17:52:'.
+
+# Created at 2025-09-04T17:52:43.951
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '43 GMT+0530 (India Standard Time))'.
+
+# Created at 2025-09-04T17:52:43.953
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;75m[AppiumDriver@4e2f][0m Removing session 6a6e4d12-068a-493d-b92c-d5a9acc6a25d from our master session list'.
+
+# Created at 2025-09-04T17:52:43.959
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Proxying [DELETE /session/6a6e4d12-068a-493d-b92c-d5a9acc6a25d] to [DELETE http://127.0.0.1:'.
+
+# Created at 2025-09-04T17:52:43.962
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '8100/session/A607295D-0F6C-4D45-8404-10FBB286668F] with no body'.
+
+# Created at 2025-09-04T17:52:43.968
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Got response with status 200: {"value":'.
+
+# Created at 2025-09-04T17:52:43.969
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream 'null,"sessionId":null}'.
+
+# Created at 2025-09-04T17:52:43.970
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;23m[DevCon Factory][0m Releasing connections for 00008110-000E69481450401E device on any port number'.
+
+# Created at 2025-09-04T17:52:43.971
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;23m[DevCon Factory][0m Found cached connections to release: ["00008110-000E69481450401E:'.
+
+# Created at 2025-09-04T17:52:43.971
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '8100","00008110-000E69481450401E:9100"]'.
+
+# Created at 2025-09-04T17:52:43.972
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;23m[DevCon Factory][0m Releasing the listener for '00008110-000E69481450401E:8100''.
+
+# Created at 2025-09-04T17:52:43.972
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;84m[iProxy@00008110:8100][0m Closing the connection'.
+
+# Created at 2025-09-04T17:52:43.973
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;23m[DevCon Factory][0m Releasing the listener for '00008110-000E69481450401E:9100''.
+
+# Created at 2025-09-04T17:52:43.974
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;131m[iProxy@00008110:9100][0m Closing the connection'.
+
+# Created at 2025-09-04T17:52:43.976
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;23m[DevCon Factory][0m Cached connections count: 0'.
+
+# Created at 2025-09-04T17:52:43.977
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;79m[XCUITestDriver@b9c2][0m Not clearing log files. Use `clearSystemFiles` capability to turn on.'.
+
+# Created at 2025-09-04T17:52:43.977
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;131m[iProxy@00008110:9100][0m The connection has been closed'.
+
+# Created at 2025-09-04T17:52:43.978
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;75m[AppiumDriver@4e2f][0m Event 'quitSessionFinished' logged at 1756988563948 (17:52:'.
+
+# Created at 2025-09-04T17:52:43.978
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '43 GMT+0530 (India Standard Time))'.
+
+# Created at 2025-09-04T17:52:43.978
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;75m[AppiumDriver@4e2f][0m Received response: null'.
+
+# Created at 2025-09-04T17:52:43.979
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;75m[AppiumDriver@4e2f][0m But deleting session, so not returning'.
+
+# Created at 2025-09-04T17:52:43.979
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;75m[AppiumDriver@4e2f][0m Responding to client with driver.deleteSession() result: null'.
+
+# Created at 2025-09-04T17:52:43.980
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;181m[6a6e4d12][0m[38;5;86m[HTTP][0m [37m<-- DELETE /wd/hub/session/6a6e4d12-068a-493d-b92c-d5a9acc6a25d [39m[32m200[39m [90m11 ms - 14[39m [90m[39m'.
+
+# Created at 2025-09-04T17:52:43.981
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;112m[Appium][0m Received SIGTERM - shutting down'.
+
+# Created at 2025-09-04T17:52:43.981
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;75m[AppiumDriver@4e2f][0m There are no active sessions for cleanup'.
+
+# Created at 2025-09-04T17:52:43.982
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;86m[HTTP][0m Closing Appium HTTP server'.
+
+# Created at 2025-09-04T17:52:43.982
+Corrupted STDOUT by directly writing to native stream in forked JVM 1. Stream '[38;5;86m[HTTP][0m Appium HTTP server has been successfully closed after 0ms'.
+
