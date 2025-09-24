@@ -106,9 +106,9 @@ public class HomeScreenRelated_Tests extends Baseclass {
         homeScreen.gotItButtonOnPlayQuiz();
     }
 
-    @FrameworkAnnotation(author = "Shivumuni", category = {CategoryType.REGRESSION})
-//    @Test(priority = 13, description = "VD_TC_447 - Verify when start play the game the quizz slide have back arrow on the top left corner")
-    public void VD_TC_447_verifyBackArrowOnQuizScreen() {
+    @FrameworkAnnotation(author = "Shivumuni", category = {CategoryType.SMOKE})
+    @Test(priority = 13, description = "VD_TC_447 - Verify when start play the game the quizz slide have back arrow on the top left corner")
+    public void verifyBackArrowOnQuizScreen() {
         landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
         homeScreen.verifyBackArrowOnQuizScreen();
     }
