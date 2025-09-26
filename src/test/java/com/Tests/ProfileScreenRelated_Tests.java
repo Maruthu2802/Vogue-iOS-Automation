@@ -3,13 +3,14 @@ package com.Tests;
 import com.automate.customannotations.FrameworkAnnotation;
 import com.automate.enums.CategoryType;
 import com.automate.pages.*;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utils.Credentials;
 
 public class ProfileScreenRelated_Tests {
 
-    HomeScreen homePage;
+    HomeScreen homeScreen;
     RunwayScreen runwayPage;
     PostScreen postPage;
     ProfileScreen profilePage;
@@ -18,7 +19,7 @@ public class ProfileScreenRelated_Tests {
 
     @BeforeMethod
     public void initialize() {
-        homePage = new HomeScreen();
+        homeScreen = new HomeScreen();
         runwayPage = new RunwayScreen();
         postPage = new PostScreen();
         profilePage = new ProfileScreen();
@@ -74,6 +75,9 @@ public class ProfileScreenRelated_Tests {
         profilePage.validateLongtextInImage();
     }
 
-
+    @AfterMethod
+    public void signOut(){
+        homeScreen.signOut();
+    }
 
 }

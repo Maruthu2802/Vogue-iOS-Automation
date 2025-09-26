@@ -118,7 +118,7 @@ public class ProfileScreen extends ScreenActions {
     @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name='REORDER IMAGES']")
     public MobileElement reorderImages;
 
-//    public void validateImageReorderInBoard() throws InterruptedException {
+//    public void validateImageReorderInBoard() {
 //        click(clickBoard,"Click On BoardImages");
 //        Thread.sleep(10000);
 //        click(clickOnThreeDots,"Click On The ThreeDots");
@@ -175,7 +175,7 @@ public class ProfileScreen extends ScreenActions {
 //    }
 
 
-//    public void validateImageReorderInTestingBoard() throws InterruptedException {
+//    public void validateImageReorderInTestingBoard() {
 //        click(testingBoard, "Click On TestingBoard");
 //        click(clickOnThreeDots, "Click On The ThreeDots");
 //        click(reorderImages, "Click On ReorderImages");

@@ -6,6 +6,7 @@ import com.automate.enums.CategoryType;
 import com.automate.pages.HomeScreen;
 import com.automate.pages.LandingAndSignInScreen;
 import com.automate.pages.SettingsScreen;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utils.Credentials;
@@ -29,7 +30,6 @@ public class SettingsScreenTest extends Baseclass {
     public void verifyPrivacyTab() {
         landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
         settingsPage.clickOnPrivacyAndTerms();
-        homeScreen.signOut();
     }
 
     @FrameworkAnnotation(author = {"Abee"}, category = {CategoryType.REGRESSION})
@@ -37,7 +37,6 @@ public class SettingsScreenTest extends Baseclass {
     public void verifyInvitesFriendsTab() {
         landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
         settingsPage.shareAppOnNotesApp();
-        homeScreen.signOut();
     }
 
     @FrameworkAnnotation(author = {"Abee"}, category = {CategoryType.REGRESSION})
@@ -45,7 +44,6 @@ public class SettingsScreenTest extends Baseclass {
     public void VD_TC_159_verifyChangeAppearance() {
         landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
         settingsPage.validateChangeAppearanceOptions();
-        homeScreen.signOut();
     }
 
     @FrameworkAnnotation(author = {"Abee"}, category = {CategoryType.REGRESSION})
@@ -53,7 +51,6 @@ public class SettingsScreenTest extends Baseclass {
     public void VD_TC_163_verifyShareFeedback() {
         landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
         settingsPage.validateShareFeedbackOptions();
-        homeScreen.signOut();
     }
 
     //PROD
@@ -62,7 +59,6 @@ public class SettingsScreenTest extends Baseclass {
     public void VD_TC_168_verifyRateApp() {
         landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
         settingsPage.validateRateAppOptions();
-        homeScreen.signOut();
     }
 
     @FrameworkAnnotation(author = {"Abee"}, category = {CategoryType.REGRESSION})
@@ -70,7 +66,6 @@ public class SettingsScreenTest extends Baseclass {
     public void VD_TC_178_verifySignOut() {
         landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
         settingsPage.validateSignOut();
-        homeScreen.signOut();
     }
 
     @FrameworkAnnotation(author = {"Abee"}, category = {CategoryType.REGRESSION})
@@ -78,8 +73,11 @@ public class SettingsScreenTest extends Baseclass {
     public void VD_TC_158_verifyDeleteAccount() {
         landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
         settingsPage.validateDeleteAccount();
-        homeScreen.signOut();
     }
 
+    @AfterMethod
+    public void signOut(){
+        homeScreen.signOut();
+    }
 
 }

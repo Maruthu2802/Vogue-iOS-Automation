@@ -12,8 +12,7 @@ public class QuizzScreen extends ScreenActions {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[contains(@name,'OF') and contains(@name,'CORRECT') and @visible='true']")
     public MobileElement answeredCorrectly;
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[contains(@name,'You got') and contains(@name,'out of')]")
-    public MobileElement youGotXOurOfYCorrect;
+
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='RESULTS']")
     public MobileElement quizResultsTab;
@@ -82,14 +81,7 @@ public class QuizzScreen extends ScreenActions {
         Assert.assertTrue(verifyElementPresent(ViewAllBtn,"VIEW ALL section"), "VIEW ALL section should be displayed");
     }
 
-    //        runwayScreen.navigateToImageArchive();
-//
-//        //VD-TC-404 - Verify when user complete the quizz with all the slides it should show the result screen
-//        Assert.assertTrue(verifyElementPresent(quizzScreen.quizResultsTab, "Quiz Results Tab"), "Quiz Results Tab should be displayed");
-//        //VD-TC-406 - Verify user can see how many answered are correct out of appeared slides count for eg: "3 of 11 Answered correctly".
-//        Assert.assertTrue(verifyElementPresent(quizzScreen.answeredCorrectly, "x Of y Correct Text"), "x Of y Correct Text should be displayed");
-
-    public void playQuizSlidesValidation() throws InterruptedException {
+    public void playQuizSlidesValidation() {
         Assert.assertTrue(verifyElementPresent(PlayQuizBtn,"PLAY QUIZ"), "PLAY QUIZ should be displayed");  //VD-TC-427, 428
         Assert.assertTrue(verifyElementPresent(QuizName1, "Quiz Name in first slide"), "Quiz Name in first slide should be displayed"); //VD-TC-428
 
@@ -107,9 +99,6 @@ public class QuizzScreen extends ScreenActions {
         //Assert.assertTrue(verifyElementPresent(PlayQuizRunwayGeniusDiff, "'DIFFICULTY:BEGINNER' is present"), " should be displayed");
     }
     //Shivumuni's code end
-
-
-
 
     public void selectingDifficulty(String difficultyOption){
         Assert.assertTrue(verifyElementPresentAndClick(difficulty, "Difficulty Dropdown"), "Difficulty Dropdown should be displayed");

@@ -26,20 +26,20 @@ public class DiscoverTab extends ScreenActions {
     public MobileElement Description;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[contains(@name,'From the Train to the Front Row—Subway Hands Photographs the Best Hands at NYFW')]")
-    public MobileElement LongText;
+    public MobileElement longText;
 
     public void navigateToStreetStyleShows() {
         click(DiscoverBottomTab, "Clicking on First show in collection");
         click(StreetStyle, "clicking on Street style");
-        Assert.assertTrue(verifyElementPresent(StreetStyleTitle, "Street style title"), "Street style title should be displayed");
-        Assert.assertTrue(verifyElementPresent(Description, "Description"), "Description should be dispalyed");
+        Assert.assertTrue(verifyElementPresent(StreetStyleTitle, "Street style title"), "Street style title is not displayed");
+        Assert.assertTrue(verifyElementPresent(Description, "Description"), "Description is not dispalyed");
     }
 
     public void viewStreetStyleLongShowName() {
         click(DiscoverBottomTab, "Clicking on First show in collection");
         click(StreetStyle, "clicking on Street style");
-        scrollUntilElementVisible(LongText);
-        Assert.assertTrue(verifyElementPresent(LongText, "Long Text in multi line"), "Long Text in multi line should be displayed");
+        scrollUntilElementVisible(longText);
+        Assert.assertTrue(verifyElementPresent(longText, "Long Text in multi line"), "Long Text in multi line is not displayed");
     }
 
 }

@@ -5,6 +5,7 @@ import com.automate.customannotations.FrameworkAnnotation;
 import com.automate.enums.CategoryType;
 import com.automate.pages.HomeScreen;
 import com.automate.pages.LandingAndSignInScreen;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utils.Credentials;
@@ -26,7 +27,6 @@ public class SavedPageValidation_Tests extends Baseclass {
         landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
         homeScreen.clickOnProfileIcon();
 //        homeScreen.scrollTillArticle();
-        homeScreen.signOut();
     }
 
     @FrameworkAnnotation(author = "Maruthu", category = {CategoryType.REGRESSION})
@@ -34,7 +34,6 @@ public class SavedPageValidation_Tests extends Baseclass {
     public void VD_TC_225_savedToBoardCtaValidation() {
         landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
         homeScreen.scrollTillChanel();
-        homeScreen.signOut();
     }
 
     @FrameworkAnnotation(author = "Maruthu", category = {CategoryType.REGRESSION})
@@ -43,7 +42,6 @@ public class SavedPageValidation_Tests extends Baseclass {
         landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
         homeScreen.clickOnProfileIcon();
 //        homeScreen.clickOnAllSavedImages();
-        homeScreen.signOut();
     }
 
     @FrameworkAnnotation(author = "Maruthu", category = {CategoryType.REGRESSION})
@@ -51,10 +49,12 @@ public class SavedPageValidation_Tests extends Baseclass {
     public void VD_TC_228_validationOfCreateBoardCta() {
         landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
 //        homeScreen.validateCreateBoardCta();
-        homeScreen.signOut();
     }
 
-
+    @AfterMethod
+    public void signOut(){
+        homeScreen.signOut();
+    }
 
 }
 

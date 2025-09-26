@@ -20,7 +20,6 @@ public class SettingsScreen extends ScreenActions {
     public MobileElement settingsTab;
 
     //Change Appearance Page
-
     @AndroidFindBy(accessibility = "CHANGE APPEARANCE")
     @iOSXCUITFindBy(accessibility = "CHANGE APPEARANCE")
     public MobileElement changeAppearance;
@@ -42,7 +41,6 @@ public class SettingsScreen extends ScreenActions {
     public MobileElement useSystemSettingsTheme;
 
     //Share Feedback Page
-
     @AndroidFindBy(accessibility = "SHARE FEEDBACK")
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@label='SHARE FEEDBACK']")
     public MobileElement shareFeedback;
@@ -64,7 +62,6 @@ public class SettingsScreen extends ScreenActions {
     public MobileElement addAGeneralComment;
 
     // Rate App Page
-
     @iOSXCUITFindBy(xpath = "(//XCUIElementTypeButton[@name='RATE APP'])[1]")
     public MobileElement rateApp;
 
@@ -72,7 +69,6 @@ public class SettingsScreen extends ScreenActions {
     public MobileElement appTitleInAppStore;
 
     // Privacy & Terms
-
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='PRIVACY & TERMS']")
     public MobileElement privacyAndTerms;
 
@@ -80,7 +76,6 @@ public class SettingsScreen extends ScreenActions {
     public MobileElement privacyAndTermsTitle;
 
     //Invite Friends
-
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='INVITE FRIENDS']")
     public MobileElement inviteFriendsTab;
 
@@ -91,7 +86,6 @@ public class SettingsScreen extends ScreenActions {
     public MobileElement saveButton;
 
     //Sign Out
-
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='SIGN OUT']")
     public MobileElement signOutButton;
 
@@ -102,7 +96,6 @@ public class SettingsScreen extends ScreenActions {
     public MobileElement signInButton;
 
     //Delete Account
-
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='DELETE ACCOUNT']")
     public MobileElement deleteAccountButton;
 
@@ -113,7 +106,6 @@ public class SettingsScreen extends ScreenActions {
     public MobileElement cancelButton;
 
     public void clickOnPrivacyAndTerms() {
-
         homeScreen.navigateToSettings();
         scrollUntilElementVisible(privacyAndTerms);
         waitingFor(8000);
@@ -122,12 +114,10 @@ public class SettingsScreen extends ScreenActions {
     }
 
     public void clickOnInviteFriends() {
-
         homeScreen.navigateToSettings();
         scrollUntilElementVisible(inviteFriendsTab);
         waitingFor(8000);
         click(inviteFriendsTab, "Invite Friends Tab");
-
     }
 
     public void shareAppOnNotesApp() {
@@ -162,7 +152,6 @@ public class SettingsScreen extends ScreenActions {
         waitingFor(3000);
         click(rateApp, "Click on Rate App");
         verifyElementPresent(appTitleInAppStore, "App should navigate to App Store after clicking on Rate App");
-
     }
 
     public void validateSignOut() {
@@ -170,7 +159,6 @@ public class SettingsScreen extends ScreenActions {
         click(signOutButton, "Click on signout button");
         click(yesButton, "Click on yes in signout confirmation pop up");
         verifyElementPresent(signInButton, "Sign-in button should be visible after navigating to App Store");
-
     }
 
     public void validateDeleteAccount() {
@@ -183,7 +171,6 @@ public class SettingsScreen extends ScreenActions {
         click(cancelButton, "Click on cancel button");
         waitForVisibility(deleteAccountButton, 5);
         verifyElementPresent(deleteAccountButton, "App should navigate to settings page");
-
     }
 
 

@@ -84,6 +84,11 @@ public class LandingAndSignInScreen extends ScreenActions {
         click(introVideo, "Skip intro video");
     }
 
+    public void validateSkipIntroVideo() {
+        skipIntroVideo();
+        Assert.assertTrue(SignInButton.isDisplayed(), "Intro Video is not skipped");
+    }
+
     public void EnterEmailAddressAndClickOnContinue(String username){
         type(EmailAddressTextField, username, "Email Address Text Field");
         Assert.assertTrue(verifyElementPresentAndClick(ContinueButton, "Continue With Email Button"), "Continue With Email Button should be displayed");
@@ -104,7 +109,7 @@ public class LandingAndSignInScreen extends ScreenActions {
         Assert.assertTrue(verifyElementPresent(InvalidEmailErrorMessage, "Invalid Email Error Message"),"Invalid Email Error Message should be displayed");
     }
 
-    public void validateLandingPage() {
+    public void validateSignInPage() {
         skipIntroVideo();
         Assert.assertTrue(isElementVisible(vogueTitle), "Vogue Title on Landing Screen should be visible");
         Assert.assertTrue(isElementVisible(crearteAccountText), "Create An Account text on Landing Screen should be visible");
