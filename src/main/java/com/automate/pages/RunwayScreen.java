@@ -16,8 +16,6 @@ public class RunwayScreen extends ScreenActions {
     ProfileScreen profileScreen =new ProfileScreen();
     HomeScreen homeScreen = new HomeScreen();
 
-
-
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[contains(@name,'RUNWAY')]")
     public MobileElement runwayTab;
 
@@ -137,6 +135,9 @@ public class RunwayScreen extends ScreenActions {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='Cancel']")
     public MobileElement cancelBtn;
 
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[contains(@name,'HOME')]")
+    public MobileElement homeTab;
+
     public void navigateToFirstShow() {
 
         navigateToRunwaytab();
@@ -164,9 +165,10 @@ public class RunwayScreen extends ScreenActions {
         click(applyButton, "Click on apply button");
         waitForVisibility(fillteredOption, 30);
         waitForVisibility(resetButton, 30);
-        Assert.assertTrue(resetButton.isDisplayed(), "Reset button is displayed");        waitForVisibility(resultCount, 30);
+        Assert.assertTrue(resetButton.isDisplayed(), "Reset button is displayed");
+        waitForVisibility(resultCount, 30);
         Assert.assertTrue(verifyElementPresent(resultCount, "Result Count"),"Result Count is displayed");
-        homeScreen.navigateToHomepage();
+        click(homeTab, "Click on home tab");
     }
 
     public void validateClearButtonInFilter() {
@@ -179,8 +181,7 @@ public class RunwayScreen extends ScreenActions {
         Assert.assertTrue(resetButton.isDisplayed(), "Reset button is displayed");
         click(resetButton, "Click on reset button");
         Assert.assertFalse(isElementVisible(fillteredOption), "Filtered option is not displayed after reset");
-        homeScreen.navigateToHomepage();
-
+        click(homeTab, "Click on home tab");
     }
 
     public void validateApplyButtonInFilter() {
@@ -191,8 +192,7 @@ public class RunwayScreen extends ScreenActions {
         click(applyButton, "Click on apply button");
         Assert.assertTrue(fillteredOption.isDisplayed(), "Filtered option is displayed");
         waitingFor(3000);
-        homeScreen.navigateToHomepage();
-
+        click(homeTab, "Click on home tab");
     }
 
     public void validateAllFilterSectionsAreVisibleInImageArchive() {
@@ -205,8 +205,6 @@ public class RunwayScreen extends ScreenActions {
             Assert.assertTrue(ScreenActions.isElementVisible(filters.get(i)),
                     filterNames.get(i) + " filter should be visible");
         }
-
-
     }
 
     public void validateAllFilterSectionsAreAccessibleInImageArchive() {
@@ -222,7 +220,7 @@ public class RunwayScreen extends ScreenActions {
         Assert.assertFalse(filters.isEmpty(), "Filters are not visible.");
         click(outsideOfFilter , "Click outside of filter to go back");
         waitingFor(3000);
-        homeScreen.navigateToHomepage();
+        click(homeTab, "Click on home tab");
 
     }
 
@@ -258,7 +256,7 @@ public class RunwayScreen extends ScreenActions {
                 click(FilterOption, "Click on filter option in image archive");
             }
         }
-        homeScreen.navigateToHomepage();
+        click(homeTab, "Click on home tab");
 
     }
 
@@ -289,7 +287,7 @@ public class RunwayScreen extends ScreenActions {
         click(cancelBtn, "Click on cancle button in sharing pop up");
         scrollDownHoldingElement(sharingPopUp);
         click(outsideOfFilter, "Click on outside the pop up");
-        homeScreen.navigateToHomepage();
+        click(homeTab, "Click on home tab");
 
     }
 
@@ -420,7 +418,7 @@ public class RunwayScreen extends ScreenActions {
 
     public void navigateToLiveStreamtab() {
         navigateToFirstShow();
-        homeScreen.navigateToHomepage();
+        click(homeTab, "Click on home tab");
 
     }
 
@@ -458,10 +456,6 @@ public class RunwayScreen extends ScreenActions {
         click(filterBackButton,"click on the filter back btn");
         click(outsideOfFilter,"click out side of the filter");
     }
-
-
-
-
 
     public void clickOnPostIcon () {
         waitForVisibility(appHeading,5);
@@ -502,7 +496,7 @@ public class RunwayScreen extends ScreenActions {
         Assert.assertTrue(verifyElementPresent(CreateBoardScreenTitle, "Create Board Screen Title"),"Create Board Screen Title should be displayed");
     }
 
-
+    //VD-TC-212: Entering Board Name and validating if Create button is enabled
     public void validateIfCreateButtonInCreateBoardIsEnabledUponEnteringBoardname(){
         navigateToCreateBoardScreen();
         Assert.assertTrue(isElementDisabled(CreateButtonInCreateBoardScreen, "Create Button In Create Board Screen"),"Create Button In Create Board Screen should be Disabled");

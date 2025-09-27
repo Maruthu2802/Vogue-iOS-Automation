@@ -1,9 +1,12 @@
 package com.automate.pages;
 
 import com.automate.pages.screenActions.ScreenActions;
+import com.automate.reports.ExtentReportLogger;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.testng.Assert;
+import utils.PlayQuizTestData;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -179,6 +182,10 @@ public class HomeScreen extends ScreenActions {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='PLAY']")
     public MobileElement PlayButton;
 
+    //Quiz Correct answer count at top right corner
+    @iOSXCUITFindBy(xpath = "//*[@type='XCUIElementTypeImage'][2]")
+    public MobileElement quizCountRightCorner;
+
     // TC_448 slide count on the top of the screen eg.1/7
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='Back']/following-sibling::XCUIElementTypeStaticText")
     public MobileElement QuizCount;
@@ -186,6 +193,9 @@ public class HomeScreen extends ScreenActions {
     //First answer
     @iOSXCUITFindBy(xpath = "(//XCUIElementTypeButton[@name])[3]")
     public MobileElement FirstAnswer;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[contains(@name,'You got') and contains(@name,'out of')]")
+    public MobileElement youGotXOurOfYCorrect;
 
     // SHARE WITH FRIENDS button TC_410
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='SHARE WITH FRIENDS']")
@@ -198,6 +208,25 @@ public class HomeScreen extends ScreenActions {
     // Closing the Share with Friends screen
     @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther//XCUIElementTypeImage)[1]")
     public MobileElement CloseShareButton;
+
+    //TC_405 - 1.Total played 2- Current Stream 3. Overall Accuracy
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='TOTAL PLAYED']")
+    public MobileElement totalPlayed;
+
+    @iOSXCUITFindBy(xpath = "//*[@type='XCUIElementTypeStaticText'][2]")
+    public MobileElement totalPlayedData;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='STREAK']")
+    public MobileElement streak;
+
+    @iOSXCUITFindBy(xpath = "//*[@type='XCUIElementTypeStaticText'][3]")
+    public MobileElement streakData;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='ACCURACY']")
+    public MobileElement accuracy;
+
+    @iOSXCUITFindBy(xpath = "//*[@type='XCUIElementTypeStaticText'][4]")
+    public MobileElement accuracyData;
 
     // CONTINUE button
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='CONTINUE']")
@@ -325,9 +354,9 @@ public class HomeScreen extends ScreenActions {
     //Methods
     public void validateVoteNowIsEnabledAndClickable() {
         scrollUntilElementVisible(VoteNowButton);
-        Assert.assertTrue(isElementEnabled(VoteNowButton, "Vote Now Button"), "Vote Now Button should be Enabled");
+        Assert.assertTrue(isElementEnabled(VoteNowButton, "Vote Now Button"), "Vote Now Button is not Enabled");
         System.out.println(VoteNowButton.getAttribute("accessible"));
-        Assert.assertEquals(VoteNowButton.getAttribute("accessible"), "true", "Vote Now Button should be Clickable");
+        Assert.assertEquals(VoteNowButton.getAttribute("accessible"), "true", "Vote Now Button is not Clickable");
         click(HomeTab, "Home Tab");
     }
 
@@ -339,7 +368,7 @@ public class HomeScreen extends ScreenActions {
 
     public void validateTwoGridView() {
         scrollToElementAndClick(VoteNowButton, "VoteNowButton");
-        Assert.assertTrue(verifyElementPresent(twoGridView, "Two Grid View"), "Two Grid View should be displayed"); // TC_489
+        Assert.assertTrue(verifyElementPresent(twoGridView, "Two Grid View"), "Two Grid View is not displayed"); // TC_489
         click(backButton, "Back Button");
     }
 
@@ -350,13 +379,13 @@ public class HomeScreen extends ScreenActions {
 
     public void validateProfileButtonInVotingResultsPage() { // TC_490,
         click(voteNowButtonInImagePage, "Vote Now Button In Image Page");
-        Assert.assertTrue(verifyElementPresent(ViewProfileButton, "View Profile Button"), "View Profile Button should be displayed"); //TC_490
+        Assert.assertTrue(verifyElementPresent(ViewProfileButton, "View Profile Button"), "View Profile Button is not displayed"); //TC_490
         click(backButton, "Back Button");
     }
 
     public void validateShareButtonInVotingResultsPage(){ //TC_491
         click(voteNowButtonInImagePage, "Vote Now Button In Image Page");
-        Assert.assertTrue(verifyElementPresent(ShareButton, "Share option"), "Share Button should be displayed"); //TC_491
+        Assert.assertTrue(verifyElementPresent(ShareButton, "Share option"), "Share Button is not displayed"); //TC_491
         click(backButton, "Back Button");
     }
 
@@ -365,10 +394,10 @@ public class HomeScreen extends ScreenActions {
         scrollToElementAndClick(LatestQuizCard, "Play Quiz");
     }
 
-    public void verifyHowItWorks() {
+    public void validateHowItWorks() {
         navigateToPlayQuiz();
-        verifyElementPresentAndClick(HowItWorksButton, "'HOW IT WORKS ?' section should be available"); //VD-TC-443
-        Assert.assertTrue(verifyElementPresent(HeaderSectn, "Header Section"),"After Expanding verifying Header section");
+        verifyElementPresentAndClick(HowItWorksButton, "'HOW IT WORKS ?' section is not available"); //VD-TC-443
+        Assert.assertTrue(verifyElementPresent(HeaderSectn, "Header Section"),"Header is not displayed");
         click(GotItButton, "Got it Button");
         click(backButton, "Back Button");
         click(backButton, "Back Button");
@@ -377,42 +406,42 @@ public class HomeScreen extends ScreenActions {
     public void navigateToQuizResultScreen() {
         scrollToElementAndClick(runwayGeniusInLatestQuiz, "RUNWAY GENIUS In Latest Quiz");
         waitForVisibility(ResultsSectionInResultScreen, 10);
-        Assert.assertTrue(verifyElementPresent(ResultsSectionInResultScreen, "RESULTS Section In Results Screen"), "RESULTS button should be displayed"); //TC_422
-        Assert.assertTrue(verifyElementPresent(LeaderBoard, "LEADERBOARD section"),"LEADERBOARD section should be displayed"); //VD-TC-423
+        Assert.assertTrue(verifyElementPresent(ResultsSectionInResultScreen, "RESULTS Section In Results Screen"), "RESULTS button is not displayed"); //TC_422
+        Assert.assertTrue(verifyElementPresent(LeaderBoard, "LEADERBOARD section"),"LEADERBOARD section is not displayed"); //VD-TC-423
     }
 
-    public void verifyPlayMoreRunwayGeniusViewAllSectionUnderResults() {
+    public void validatePlayMoreRunwayGeniusViewAllSectionUnderResults() {
         scrollUntilElementVisible(playMoreRunwayGeniusSectionUnderResults);
         scrollUntilElementVisible(viewAllSectionUnderResults);
-        Assert.assertTrue(verifyElementPresent(playMoreRunwayGeniusSectionUnderResults, "PLAY MORE RUNWAY GENIUS"), "PLAY MORE RUNWAY GENIUS section should be displayed"); //425
-        Assert.assertTrue(verifyElementPresent(viewAllSectionUnderResults,"VIEW ALL"), "VIEW ALL section should be displayed"); //426
+        Assert.assertTrue(verifyElementPresent(playMoreRunwayGeniusSectionUnderResults, "PLAY MORE RUNWAY GENIUS"), "PLAY MORE RUNWAY GENIUS section is not displayed"); //425
+        Assert.assertTrue(verifyElementPresent(viewAllSectionUnderResults,"VIEW ALL"), "VIEW ALL section is not displayed"); //426
     }
 
-    public void verifyQuizznameAndPlaynowCTAbuttonForEachSlideOftheQuizz() {
-        Assert.assertTrue(verifyElementPresent(playQuizButtonUnderPlayMoreRunwayGenius,"PLAY QUIZ"), "PLAY QUIZ should be available"); //VD-TC-428
-        Assert.assertTrue(verifyElementPresent(playQuizButtonUnderPlayMoreRunwayGenius, "Quiz Name"), "Quiz Name should be in first slide");//VD-TC-428
+    public void validateQuizznameAndPlaynowCTAbuttonForEachSlideOftheQuizz() {
+        Assert.assertTrue(verifyElementPresent(playQuizButtonUnderPlayMoreRunwayGenius,"PLAY QUIZ"), "PLAY QUIZ is not available"); //VD-TC-428
+        Assert.assertTrue(verifyElementPresent(playQuizButtonUnderPlayMoreRunwayGenius, "Quiz Name"), "Quiz Name is not in first slide");//VD-TC-428
         scrollVertical();
         waitingFor(2000);
         horizontalSwipe();//VD-TC-427
-        Assert.assertTrue(verifyElementPresent(playQuizButtonUnderPlayMoreRunwayGenius,"PLAY QUIZ"), "PLAY QUIZ should be available");//VD-TC-428
-        Assert.assertTrue(verifyElementPresent(playQuizButtonUnderPlayMoreRunwayGenius, "Quiz Name"), "Quiz Name should be present in second slide");;//VD-TC-428
+        Assert.assertTrue(verifyElementPresent(playQuizButtonUnderPlayMoreRunwayGenius,"PLAY QUIZ"), "PLAY QUIZ is not available");//VD-TC-428
+        Assert.assertTrue(verifyElementPresent(playQuizButtonUnderPlayMoreRunwayGenius, "Quiz Name"), "Quiz Name is not present in second slide");;//VD-TC-428
         waitingFor(2000);
         horizontalSwipe();//VD-TC-427
-        Assert.assertTrue(verifyElementPresent(playQuizButtonUnderPlayMoreRunwayGenius,"PLAY QUIZ"), "PLAY QUIZ should be available");//VD-TC-428
-        Assert.assertTrue(verifyElementPresent(playQuizButtonUnderPlayMoreRunwayGenius, "Quiz Name"), "Quiz Name should be present in third slide");//VD-TC-428
+        Assert.assertTrue(verifyElementPresent(playQuizButtonUnderPlayMoreRunwayGenius,"PLAY QUIZ"), "PLAY QUIZ is not available");//VD-TC-428
+        Assert.assertTrue(verifyElementPresent(playQuizButtonUnderPlayMoreRunwayGenius, "Quiz Name"), "Quiz Name is not present in third slide");//VD-TC-428
     }
 
-    public void verifyPlayButtonAndDifficultyLevelForQuiz() {
-        Assert.assertTrue(verifyElementPresentAndClick(playQuizButtonUnderPlayMoreRunwayGenius, "PLAY QUIZ under PLAY MORE RUNWAY GENIUS"), "PLAY QUIZ under PLAY MORE RUNWAY GENIUS should be displayed"); // TC_429
-        Assert.assertTrue(verifyElementPresent(difficultyLevel, "DIFFICULTY MODE"), "DIFFICULTY:GENIUS should be present"); //TC_518
+    public void validatePlayButtonAndDifficultyLevelForQuiz() {
+        Assert.assertTrue(verifyElementPresentAndClick(playQuizButtonUnderPlayMoreRunwayGenius, "PLAY QUIZ under PLAY MORE RUNWAY GENIUS"), "PLAY QUIZ under PLAY MORE RUNWAY GENIUS is not displayed"); // TC_429
+        Assert.assertTrue(verifyElementPresent(difficultyLevel, "DIFFICULTY MODE"), "DIFFICULTY:GENIUS is not present"); //TC_518
         click(backButton, "Back Button");
         click(backButton, "Back Button");
     }
 
-    public void verifyHowItWorksContent() {
+    public void validateHowItWorksContent() {
         // verifying all sections // VD-TC-444
         navigateToPlayQuiz();
-        verifyElementPresentAndClick(HowItWorksButton, "'HOW IT WORKS ?' section should be available");
+        verifyElementPresentAndClick(HowItWorksButton, "'HOW IT WORKS ?' section is not available");
         List<MobileElement> elementsToVerify = Arrays.asList(
                 HeaderSectn,
                 DifficultyContent,
@@ -427,7 +456,7 @@ public class HomeScreen extends ScreenActions {
         click(backButton, "Back Button");
     }
 
-    public void verifyHowItSectionScroll(){
+    public void validateHowItSectionScroll(){
         navigateToPlayQuiz();
         verifyElementPresentAndClick(HowItWorksButton, "'HOW IT WORKS ?'");
         waitForVisibility(HeaderSectn,30);
@@ -435,28 +464,28 @@ public class HomeScreen extends ScreenActions {
         click(backButton, "Back Button");
     }
 
-    public void gotItButtonOnPlayQuiz(){
+    public void validateGotItButtonOnPlayQuiz(){
         navigateToPlayQuiz();
         verifyElementPresentAndClick(HowItWorksButton, "HOW IT WORKS ?");
         verifyElementPresentAndClick(GotItButton, "GOT IT"); //VD-TC-446
         click(backButton, "Back Button");
     }
 
-    public void verifyBackArrowOnQuizScreen(){
+    public void validateBackArrowOnQuizScreen(){
         navigateToPlayQuiz();
         verifyElementPresentAndClick(PlayButton, "PLAY");
-        Assert.assertTrue(verifyElementPresent(backButton, "Back Arrow"),"Back arrow should be displayed on top of the screen"); //VD-TC-447
+        Assert.assertTrue(verifyElementPresent(backButton, "Back Arrow"),"Back arrow is not displayed on top of the screen"); //VD-TC-447
         click(backButton, "Back Button");
     }
 
-    public void verifyQuizSlideCount(){
+    public void validateQuizSlideCount(){
         navigateToPlayQuiz();
         verifyElementPresentAndClick(PlayButton, "PLAY");
         Assert.assertTrue(verifyElementPresent(QuizCount, "Quiz Count"),"Quiz slide should have slide count on the top of the screen"); //VD-TC-448
         click(backButton,"Back Button");
     }
 
-    public void validateClickOnbackButtonOnPlayQuiz()  {
+    public void validateClickOnBackButtonOnPlayQuiz()  {
         navigateToPlayQuiz();
         verifyElementPresentAndClick(PlayButton, "PLAY");
         click(FirstAnswer, "First Answer of 1st Question");
@@ -465,43 +494,111 @@ public class HomeScreen extends ScreenActions {
         // VD-TC-455
         waitForElementToBeClickable(backButton, 30);
         click(backButton, "Back '<' symbol");
-        Assert.assertTrue(verifyElementPresent(VogueLogo, "Vogue logo"), "Vogue logo should be displayed");
+        Assert.assertTrue(verifyElementPresent(VogueLogo, "Vogue logo"), "Vogue logo is not displayed");
     }
 
-    public void verifyPlayingQuiz()  {
+    public void navigateToQuizResultScreenAfterPlayingQuiz(){
         navigateToPlayQuiz();
         verifyElementPresentAndClick(PlayButton, "PLAY");
-        for (int i = 1; i <= 7; i++) {
+        String[] quizAnswers = { //VD-TC-407
+                PlayQuizTestData.quizAnswer1,
+                PlayQuizTestData.quizAnswer2,
+                PlayQuizTestData.quizAnswer3,
+                PlayQuizTestData.quizAnswer4,
+                PlayQuizTestData.quizAnswer5,
+                PlayQuizTestData.quizAnswer6,
+                PlayQuizTestData.quizAnswer7
+        };
+        int correctAnswer = 0;
+        int wrongAnswer = 0;
+        // Initialize previous image value to 0 or get initial value before loop starts
+        String imageValueStr = quizCountRightCorner.getAttribute("name");  // or "label"
+        int previousImageValue = Integer.parseInt(imageValueStr);
+        int i = 1; // Start from 1
+
+        while (i <= 7) {
             String str = QuizCount.getText();
-            Assert.assertTrue(str.contains(String.valueOf(i)), "The Quiz count "+i+" is not displayed");    //TC_453
-            waitForVisibility(QuizCount,30);
-            waitForVisibility(FirstAnswer, 30);//VD-TC-456
+            Assert.assertTrue(str.contains(String.valueOf(i)), "The Quiz count " + i + " is not displayed");        //VD-TC-453
+            waitForVisibility(FirstAnswer, 30);
             click(FirstAnswer, "Answers");
+            waitForVisibility(FirstAnswer, 30);
+            String answerText = FirstAnswer.getText();
+            System.out.println("Answer displayed after click: " + answerText);
+            if (answerText.equals(quizAnswers[i - 1])) { // Use i - 1 to access correct index
+                correctAnswer++;
+                ExtentReportLogger.logInfo("Correct answer matched at index " + (i - 1) + ": " + answerText);
+                System.out.println("Correct answer matched at index " + (i - 1) + ": " + answerText);
+            } else {
+                wrongAnswer++;
+                ExtentReportLogger.logInfo("Wrong answer at index " + (i - 1) + ". Displayed: " + answerText + ", Expected: " + quizAnswers[i - 1]);
+                System.out.println("Wrong answer at index " + (i - 1) + ". Displayed: " + answerText + ", Expected: " + quizAnswers[i - 1]);
+            }
+            // Get the current image value after answering
+            imageValueStr = quizCountRightCorner.getAttribute("name");  // or "label"
+            int currentImageValue = Integer.parseInt(imageValueStr);
+            System.out.println("Current imageValue: " + currentImageValue + ", Previous imageValue: " + previousImageValue);
+            // Verify if imageValue increases only when correctAnswer increases
+            if (correctAnswer > 0 && currentImageValue > previousImageValue) {
+                ExtentReportLogger.logInfo("Correct Answer count has increased to "+i+" as expected.");
+                System.out.println("Correct Answer count has increased to "+i+" as expected.");
+            } else if (correctAnswer > 0 && currentImageValue == previousImageValue) {
+                ExtentReportLogger.logInfo("Correct Answer count is not increased to "+i+" as expected.");
+                System.out.println("Correct Answer count is not increased to "+i+" as expected.");
+            }
+            previousImageValue = currentImageValue; // Update for next iteration
             waitingFor(3000);
+            i++; // Increment i
         }
+        System.out.println("Total Correct: " + correctAnswer);
+        System.out.println("Total Wrong: " + wrongAnswer);
+        System.out.println("Final imageValue: " + previousImageValue);
+        Assert.assertEquals(previousImageValue,correctAnswer,"Both values are not matching");   //VD-TC-454
+        Assert.assertTrue(isElementVisible(youGotXOurOfYCorrect), "Quiz Completion screen is not displayed");   //VD-TC-404, VD-TC-406
+    }
+
+    public void validatePlayingQuiz()  {
+        navigateToQuizResultScreenAfterPlayingQuiz();
+        // Final comparison
+        waitForVisibility(ShareWithButton, 30);
         verifyElementPresentAndClick(ShareWithButton, "SHARE WITH FRIENDS");
-        Assert.assertTrue(verifyElementPresent(SharePage, "SHARE Header"),"SHARE page should be displayed");; //VD-TC-438
-        Assert.assertTrue(verifyElementPresent(ShareMsgButton, "MESSAGE Option"),"MESSAGE option");
+        Assert.assertTrue(verifyElementPresent(SharePage, "SHARE Header"),"SHARE page is not displayed");; //VD-TC-438
+        Assert.assertTrue(verifyElementPresent(MessageButton, "MESSAGE Option"),"MESSAGE option");
         verifyElementPresentAndClick(CloseShareButton, "X");
         verifyElementPresentAndClick(ContinueButton, "CONTINUE");
     }
 
-    public void shareOptions()  { //VD-TC-410
+    public void navigateQuizResultsInLeaderboard(){
+        navigateToQuizResultScreenAfterPlayingQuiz();
+        verifyElementPresentAndClick(ContinueButton, "CONTINUE");
+    }
+
+    public void validateTotalPlayedStreakAccuracy(){ //VD-TC-405
+        Assert.assertTrue(verifyElementPresent(totalPlayed, "Total Played"));
+        Assert.assertNotNull(totalPlayedData.getText(), "Data is null");
+        Assert.assertTrue(verifyElementPresent(streak, "Streak"));
+        Assert.assertNotNull(streakData.getText(), "Data is null");
+        Assert.assertTrue(verifyElementPresent(accuracy, "Accuracy"));
+        Assert.assertNotNull(accuracyData.getText(), "Data is null");
+        click(backButton, "Back Button");
+    }
+
+
+    public void validateShareOptions()  { //VD-TC-410
         verifyElementPresentAndClick(ShareButton, "Share option at the top right corner");
-        Assert.assertTrue(verifyElementPresent(MessageButton, "MESSAGE option"),"MESSAGE option should be displayed");
+        Assert.assertTrue(verifyElementPresent(MessageButton, "MESSAGE option"),"MESSAGE option is not displayed");
         waitingFor(1000);
         verifyElementPresentAndClick(MoreButton, "MORE option");
         waitingFor(1000);
-        Assert.assertTrue(verifyElementPresent(MailButton, "Mail option"),"Mail option should be displayed");
-        Assert.assertTrue(verifyElementPresent(NotesButton, "Notes option"),"Notes option should be displayed");
+        Assert.assertTrue(verifyElementPresent(MailButton, "Mail option"),"Mail option is not displayed");
+        Assert.assertTrue(verifyElementPresent(NotesButton, "Notes option"),"Notes option is not displayed");
         scrollDownHoldingElement(vogueComButton);
     }
 
-    public void  shareWithFrnzMsg(){
+    public void  validateShareWithFrnzMsg(){
         // verifying after clicking on MESSAGE it is directed to the correct page // VD-TC-437
         verifyElementPresentAndClick(ShareButton, "SHARE WITH FRIENDS");
         verifyElementPresentAndClick(MessageButton, "MESSAGE option");
-        Assert.assertTrue(verifyElementPresent(NewMsgHeader, "New Message"), "New Message header should be available");
+        Assert.assertTrue(verifyElementPresent(NewMsgHeader, "New Message"), "New Message header is not available");
         verifyElementPresentAndClick(CancelButton, "Cancel");
         closeAndLaunchApp();
     }
@@ -531,7 +628,7 @@ public class HomeScreen extends ScreenActions {
         // Wait for the visibility of the first post under Latest Stories
         waitForVisibility(FirstPostUnderLatestStorySection, 10);
         // Verify the first post is present
-        Assert.assertTrue(verifyElementPresent(FirstPostUnderLatestStorySection, "first post under Latest Stories"), "First post under Latest Stories should be displayed");
+        Assert.assertTrue(verifyElementPresent(FirstPostUnderLatestStorySection, "first post under Latest Stories"), "First post under Latest Stories is not displayed");
         // Get and print the text from the first post
         String postText = FirstPostUnderLatestStorySection.getAttribute("label");
         System.out.println("Text of the first post under Latest Stories: " + postText);
@@ -544,7 +641,7 @@ public class HomeScreen extends ScreenActions {
         scrollUntilElementVisible(GroupChat);
         waitForElementToBeClickable(GroupChat, 10);
         // Verify the first post is present
-        Assert.assertTrue(verifyElementPresent(GroupChat, "Group chat"), "Group chat should be displayed");
+        Assert.assertTrue(verifyElementPresent(GroupChat, "Group chat"), "Group chat is not displayed");
     }
 
     public void navigateToGroupChat() {
@@ -553,18 +650,12 @@ public class HomeScreen extends ScreenActions {
         scrollUntilElementVisible(GroupChat);
         waitForElementToBeClickable(GroupChat, 10);
         click(GroupChat, "Group Chat");
-
     }
 
     public void navigateBackToHomeScreenFromGroupChat(){
         click(backButton, "Back Button");
         click(RunwayBottomTab,"Runway Bottom Tab");
         waitForVisibility(HomeScreenVogueCTA, 10);
-
-    }
-
-    public void navigateToHomepage(){
-        click(homeTab, "Click on home tab");
     }
 
     public void postCommentInGroupChat()  {
@@ -576,16 +667,15 @@ public class HomeScreen extends ScreenActions {
         click(DoneArrowGroupChat, "Done Arrow");
         click(backButton,"Click On BackButton");
         click(homeTab,"Click On HomeTab");
-
     }
 
     //   VD-TC-343
-    public void validatePostedCommentInGroupChat(String commentText) throws InterruptedException {
+    public void validatePostedCommentInGroupChat(String commentText)  {
         postCommentInGroupChat();
         scrollALittle("up");
         waitForVisibility(AddedComment, 8);
         System.out.println("The get text String: "+getText(AddedComment));
-        Assert.assertTrue(getText(AddedComment).contains(commentText), "Group chat should be displayed");
+        Assert.assertTrue(getText(AddedComment).contains(commentText), "Group chat is not displayed");
         scrollALittle("down");
         click(backButton, "Back Button");
         click(RunwayBottomTab, "Runway Bottom Tab");
@@ -598,19 +688,19 @@ public class HomeScreen extends ScreenActions {
         longPressElement(PreexistingCommentInGroupChat, 2, "Pre-existing Comment in Group Chat");
         waitingFor(3000);
         click(Report, "Report");
-        Assert.assertTrue(verifyElementPresent(ReasonsForReportingPopup,"Reasons For Reporting Popup"), "Reasons For Reporting Popup should be displayed");
+        Assert.assertTrue(verifyElementPresent(ReasonsForReportingPopup,"Reasons For Reporting Popup"), "Reasons For Reporting Popup is not displayed");
     }
 
     //    VD-TC-346 - Stage      -- Home>Today>Group chat>>Hold for few sec on comments that pre exist.
     public void VerifyVisibilityOfReportingOptions() {
-        Assert.assertTrue(verifyElementPresent(InapproriateOrIllegalComment, "INAPPROPRIATE OR ILLEGAL COMMENT"), "INAPPROPRIATE OF ILLEGAL COMMENT should be displayed");
-        Assert.assertTrue(verifyElementPresent(InfringesCopyright, "INFRINGES COPYRIGHT"), "INFRINGES COPYRIGHT should be displayed");
+        Assert.assertTrue(verifyElementPresent(InapproriateOrIllegalComment, "INAPPROPRIATE OR ILLEGAL COMMENT"), "INAPPROPRIATE OF ILLEGAL COMMENT is not displayed");
+        Assert.assertTrue(verifyElementPresent(InfringesCopyright, "INFRINGES COPYRIGHT"), "INFRINGES COPYRIGHT is not displayed");
     }
 
     //    //    VD-TC-348
     public void reportingOptions() {
         click(InapproriateOrIllegalComment, "INAPPROPRIATE OR ILLEGAL COMMENT");
-        Assert.assertTrue(verifyElementPresent(ExternalPlatformToReport, "External Platforms"), "External Platforms should be displayed");
+        Assert.assertTrue(verifyElementPresent(ExternalPlatformToReport, "External Platforms"), "External Platforms is not displayed");
     }
 
     public void navigatingBackToHomeScreenFromReportingOptionsOfGroupChatComments(){
@@ -627,7 +717,7 @@ public class HomeScreen extends ScreenActions {
         // Wait for the visibility of the first post under Latest Stories
         waitForVisibility(FirstPostUnderLatestStorySection, 10);
         // Verify the first post is present
-        Assert.assertTrue(verifyElementPresent(FirstPostUnderLatestStorySection, "first post under Latest Stories"), "first post under Latest Stories should be displayed");
+        Assert.assertTrue(verifyElementPresent(FirstPostUnderLatestStorySection, "first post under Latest Stories"), "first post under Latest Stories is not displayed");
         click(FirstPostUnderLatestStorySection, "INAPPROPRIATE OF ILLEGAL COMMENT");
     }
 
@@ -675,13 +765,6 @@ public class HomeScreen extends ScreenActions {
         verifyElementPresent(GroupChat, "Checking Group chat is visible");
         click(GroupChat, "Clicking on Group Chat");
     }
-
-    public void validateKeyBoardGetsHiddenAfterClickingDoneButtonWhilePostingComment(String commentText) throws InterruptedException {
-        navigateToGroupChat();
-        postCommentInGroupChat();
-        Assert.assertFalse(isElementVisible(groupchatKeyboard));
-    }
-
     //Maruthu's code end
 
     public void navigateToSettings() {
@@ -771,24 +854,24 @@ public class HomeScreen extends ScreenActions {
     }
 
     public void navigateToVotingGalleryPage() {
-        Assert.assertTrue(verifyElementPresent(HomeScreenVogueCTA, "Home Screen Vogue CTA"), "Home Screen Vogue CTA should be displayed");
+        Assert.assertTrue(verifyElementPresent(HomeScreenVogueCTA, "Home Screen Vogue CTA"), "Home Screen Vogue CTA is not displayed");
         scrollToElementAndClick(VoteNowSecondCard, "Vote Now Second Card");
-        Assert.assertTrue(verifyElementPresent(VotingGalleryScreenTitle, "Voting Gallery Screen Title"), "Voting Gallery Screen Title should be displayed");
+        Assert.assertTrue(verifyElementPresent(VotingGalleryScreenTitle, "Voting Gallery Screen Title"), "Voting Gallery Screen Title is not displayed");
     }
 
     public void clickOnVoteNowForGalleryImage(MobileElement whichImage, String image) {
         scrollUntilElementVisible(whichImage);
         scrollUp();
-        Assert.assertTrue(verifyElementPresentAndClick(whichImage, image), image + " should be displayed");
-        Assert.assertTrue(verifyElementPresentAndClick(VoteNowButtonInImageScreen, "Vote Now Button In Image Screen"), "Vote Now Button In Image Screen should be displayed");
-        Assert.assertTrue(verifyElementPresent(ResultsScreenTitle, "Results Screen Title"), "Results Screen Title should be displayed");
+        Assert.assertTrue(verifyElementPresentAndClick(whichImage, image), image + " is not displayed");
+        Assert.assertTrue(verifyElementPresentAndClick(VoteNowButtonInImageScreen, "Vote Now Button In Image Screen"), "Vote Now Button In Image Screen is not displayed");
+        Assert.assertTrue(verifyElementPresent(ResultsScreenTitle, "Results Screen Title"), "Results Screen Title is not displayed");
     }
 
     //VD-TC-481 - Verify User Can Vote on All Available Images
     public void verifyUserCanVoteOnMultipleImages() {
         navigateToVotingGalleryPage();
         clickOnVoteNowForGalleryImage(FirstVoteNowImageInVotingGallery, "First Vote Now Image In Voting Gallery");
-        Assert.assertTrue(verifyElementPresent(SpecialMessageOnMatchingEditorsChoice, "Special Message On Matching Editors Choice"), "Special Message On Matching Editors Choice should be displayed");
+        Assert.assertTrue(verifyElementPresent(SpecialMessageOnMatchingEditorsChoice, "Special Message On Matching Editors Choice"), "Special Message On Matching Editors Choice is not displayed");
         click(backButton, "Back Button");
     }
 
@@ -803,22 +886,13 @@ public class HomeScreen extends ScreenActions {
         navigateToSettings();
         click(signOutButton, "Signout button");
         click(yesButton, "Yes in Signout confirmation pop up");
-        Assert.assertTrue(verifyElementPresent(signInButton, "SignIn Button"), "SignIn Button should be displayed");
+        Assert.assertTrue(verifyElementPresent(signInButton, "SignIn Button"), "SignIn Button is not displayed");
     }
 
     public void signOut(){
         navigateToSettings();
         click(signOutButton, "Signout button");
         click(yesButton, "yes in Signout confirmation pop up");
-    }
-
-    public void navigateToVoteNowInGallery() {
-        clickToSkipIntroVideo();
-        scrollToElementAndClick(VoteNowSecondCard, "VoteNowBtn");
-        scrollToElementAndClick(FirstVoteNowImageInVotingGallery, "VoteNowBtn1");
-        click(VoteNowButtonInImageScreen, "Click On VoteNowBtn2");
-        waitForVisibility(SpecialMessageOnMatchingEditorsChoice, 5);
-        Assert.assertTrue(SpecialMessageOnMatchingEditorsChoice.isDisplayed());
     }
 
 

@@ -70,6 +70,55 @@ public class ProfileScreenRelated_Tests {
         profilePage.boardCreated(commentText);
     }
 
+    @FrameworkAnnotation(author = {"Abee"}, category = {CategoryType.SMOKE})
+    @Test(priority = 7, description = "VD_TC_203-Verify the Grid View Is Displayed")
+    public void VD_TC_203_verifyGridViewIsDisplayed() {
+        landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
+        profilePage.validateGridViewIsDisplayed();
+    }
+
+    @FrameworkAnnotation(author = {"Abee"}, category = {CategoryType.SMOKE})
+    @Test(priority = 8, description = "VD_TC_213-Verify the Long Title Creation")
+    public void VD_TC_213_verifyLongTitleCreation() {
+        landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
+        profilePage.validateLongTitleCreation();
+    }
+
+    @FrameworkAnnotation(author = {"Abee"}, category = {CategoryType.SMOKE})
+    @Test(priority = 9, description = "VD_TC_216-Verify the Dismiss board creation drawer")
+    public void VD_TC_216_verifyDismissBoardCreationDrawer() {
+        landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
+        profilePage.validateDismissBoardCreationDrawer();
+    }
+
+    @FrameworkAnnotation(author = {"Abee"}, category = {CategoryType.SMOKE})
+    @Test(priority = 10, description = "VD_TC_221-Verify the add notes in images")
+    public void VD_TC_221_verifyAddNotesInImage() {
+        landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
+        profilePage.validateDisplayingNotesIcon();
+    }
+
+    @FrameworkAnnotation(author = {"Abee"}, category = {CategoryType.SMOKE})
+    @Test(priority = 11, description = "VD_TC_228-Verify the my boards page")
+    public void VD_TC_228_verifyMyBoardsEmpty() {
+        landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
+        profilePage.validateMyBoardsEmpty();
+    }
+
+    @FrameworkAnnotation(author = {"Abee"}, category = {CategoryType.SMOKE})
+    @Test(priority = 12, description = "VD_TC_229-Verify the All saved Images are Empty")
+    public void VD_TC_229_verifyAllSavedImagesEmpty() {
+        landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
+        profilePage.validateAllSavedImagesEmpty();
+    }
+
+    @FrameworkAnnotation(author = {"Abee"}, category = {CategoryType.SMOKE})
+    @Test(priority = 13, description = "VD_TC_237-Verify the long text in Image")
+    public void VD_TC_237_verifyLongTextInImage() {
+        landingAndSignInScreen.signInFlow(Credentials.subscribedUsername, Credentials.subscribedPassword);
+        profilePage.validateLongtextInImage();
+    }
+
     @AfterMethod
     public void signOut(){
         homeScreen.signOut();
