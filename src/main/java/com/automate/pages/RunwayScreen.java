@@ -13,8 +13,10 @@ import java.util.List;
 
 public class RunwayScreen extends ScreenActions {
 
-    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='Vogue']")
-    public MobileElement VoteNowSecondCard;
+    ProfileScreen profileScreen =new ProfileScreen();
+    HomeScreen homeScreen = new HomeScreen();
+
+
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[contains(@name,'RUNWAY')]")
     public MobileElement runwayTab;
@@ -120,6 +122,21 @@ public class RunwayScreen extends ScreenActions {
     @iOSXCUITFindBy(xpath = "(//XCUIElementTypeStaticText[@name='New Note'])[1]")
     public MobileElement newNoteInNotesApp;
 
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[contains(@name,'Save')]")
+    public MobileElement bookMark;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[contains(@name,'TESTING')]")
+    public MobileElement testingBoard;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeImage[@name='chevron.forward']")
+    public  MobileElement chevronBtn;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeNavigationBar[@name='UIActivityContentView']")
+    public MobileElement sharingPopUp;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='Cancel']")
+    public MobileElement cancelBtn;
+
     public void navigateToFirstShow() {
 
         navigateToRunwaytab();
@@ -128,15 +145,7 @@ public class RunwayScreen extends ScreenActions {
 
     }
 
-//    public void saveImagesFromCollections(){
-//
-//        waitingFor(8000);
-//        click(optionsinFirstShowScreen , "Options in First Show Screen");
-//        click(selectLooksTosave , "Select looks to save ");
-//        click(selectImage, "Select image");
-//        click(saveButton , "Save button in below pop up");
-//        click(saveButton , "Save button in boards page");
-//    }
+
 
     public void navigateToFilterInImageArchive(){
 
@@ -151,13 +160,13 @@ public class RunwayScreen extends ScreenActions {
         click(locationFilter, "Click on Location Filter");
         click(filterBy, "Click an option in filter");
         waitForVisibility(applyButton, 30);
-        Assert.assertTrue(verifyElementPresent(applyButton, "Filtered option"), "Filtered option should be displayed");
+        Assert.assertTrue(verifyElementPresent(applyButton, "Filtered option"), "Filtered option is displayed");
         click(applyButton, "Click on apply button");
         waitForVisibility(fillteredOption, 30);
         waitForVisibility(resetButton, 30);
-        Assert.assertTrue(verifyElementPresent(resetButton,"Reset button"),"Reset button should be displayed");
-        waitForVisibility(resultCount, 30);
-        Assert.assertTrue(verifyElementPresent(resultCount, "Result Count"),"Result Count should be displayed");
+        Assert.assertTrue(resetButton.isDisplayed(), "Reset button is displayed");        waitForVisibility(resultCount, 30);
+        Assert.assertTrue(verifyElementPresent(resultCount, "Result Count"),"Result Count is displayed");
+        homeScreen.navigateToHomepage();
     }
 
     public void validateClearButtonInFilter() {
@@ -167,8 +176,10 @@ public class RunwayScreen extends ScreenActions {
         click(filterBy, "Click an option in filter");
         click(applyButton, "Click on apply button");
         waitForVisibility(fillteredOption, 20);
+        Assert.assertTrue(resetButton.isDisplayed(), "Reset button is displayed");
         click(resetButton, "Click on reset button");
-        Assert.assertFalse(isElementVisible(fillteredOption), "Filtered option should not be displayed after reset");
+        Assert.assertFalse(isElementVisible(fillteredOption), "Filtered option is not displayed after reset");
+        homeScreen.navigateToHomepage();
 
     }
 
@@ -178,7 +189,9 @@ public class RunwayScreen extends ScreenActions {
         click(locationFilter, "Click on Location Filter");
         click(filterBy, "Click an option in filter");
         click(applyButton, "Click on apply button");
-        Assert.assertTrue(fillteredOption.isDisplayed(), "Filtered option should be displayed");
+        Assert.assertTrue(fillteredOption.isDisplayed(), "Filtered option is displayed");
+        waitingFor(3000);
+        homeScreen.navigateToHomepage();
 
     }
 
@@ -206,7 +219,10 @@ public class RunwayScreen extends ScreenActions {
             click(filters.get(i), "Click on " + filterNames.get(i) + " Filter");
             click(backButton, "Click on Back button");
         }
-
+        Assert.assertFalse(filters.isEmpty(), "Filters are not visible.");
+        click(outsideOfFilter , "Click outside of filter to go back");
+        waitingFor(3000);
+        homeScreen.navigateToHomepage();
 
     }
 
@@ -238,15 +254,15 @@ public class RunwayScreen extends ScreenActions {
                 click(outsideOfFilter, "Tap outside to dismiss filter drawer after exception");
             }
 
-            // Go back to filter list before checking next filter (only if not last one)
             if (i < filters.length - 1) {
                 click(FilterOption, "Click on filter option in image archive");
             }
         }
+        homeScreen.navigateToHomepage();
 
     }
 
-    public void validateSharingImageinCollection() {
+    public void validateSharingImageInCollection() {
         navigateToRunwaytab();
         click(firstShowInCollection, "Click on first show in collection");
         click(firstShowInCollectionDetails, "click on first show in collection details");
@@ -257,8 +273,9 @@ public class RunwayScreen extends ScreenActions {
 
         DriverManager.getDriver().activateApp("com.apple.mobilenotes");
         String expectedNoteTitle = "My Shared Note"; // Replace with your note title
-        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), 10);
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), 20);
         boolean isShared = false;
+        click(chevronBtn, "Click chevron forward button");
         try {
             isShared = new WebDriverWait(DriverManager.getDriver(), 10)
                     .until(ExpectedConditions.visibilityOf(newNoteInNotesApp))
@@ -267,6 +284,12 @@ public class RunwayScreen extends ScreenActions {
 
         }
         Assert.assertTrue(isShared, "Image was not shared to Notes!");
+        DriverManager.getDriver().activateApp("com.condenast.voguerunway.rokmetro");
+        waitForVisibility(cancelBtn, 20);
+        click(cancelBtn, "Click on cancle button in sharing pop up");
+        scrollDownHoldingElement(sharingPopUp);
+        click(outsideOfFilter, "Click on outside the pop up");
+        homeScreen.navigateToHomepage();
 
     }
 
@@ -277,7 +300,6 @@ public class RunwayScreen extends ScreenActions {
         String[] filterNames = {"brand", "season"};
 
         for (int i = 0; i < filters.length; i++) {
-            // Click directly on the filter (already visible on the page)
             click(filters[i], "Click on " + filterNames[i] + " option in filter");
 
             try {
@@ -285,8 +307,6 @@ public class RunwayScreen extends ScreenActions {
                     String selectedOption = firstOptionInfilter.getText();
                     click(firstOptionInfilter, "Click on first option in " + filterNames[i] + " filter");
                     click(applyButton, "Click on apply button");
-
-                    // Validate that product matches filter
                     String productText = firstShowInCollectionafterfilter.getText();
                     Assert.assertTrue(
                             productText.contains(selectedOption),
@@ -371,7 +391,7 @@ public class RunwayScreen extends ScreenActions {
     public MobileElement locationTab;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='AMSTERDAM']")
-    public MobileElement filterByLocation;
+    public MobileElement verifyText;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeTextField[@name='SEARCH']")
     public MobileElement searchTab;
@@ -379,23 +399,44 @@ public class RunwayScreen extends ScreenActions {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeImage\n")
     public MobileElement filterBackButton;
 
+
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[@name='Added to Test']")
+    public MobileElement addedToBoardCta;
+
     public void clickOnImageArchieve() {
-        ScreenActions.click(imageArchieve , "Click On Image Archieve");
-        ScreenActions.click(filterOption , "Click On FilterTab");
-        ScreenActions.click(locationTab , "Click On FilterTab");
-        ScreenActions.click(filterByLocation , "Click On FilterTab");
-        ScreenActions.click(filterByLocation , "Click On FilterTab");
+        clickOnRunway();
+        verifyElementPresentAndClick(imageArchieve , "Click On Image Archieve");
+        click(filterOption , "Click On FilterTab");
+        waitingFor(3000);
+        click(locationTab , "Click On FilterTab");
+        waitForVisibility(verifyText,10);
+        Assert.assertTrue(verifyText.isDisplayed());
+        click(verifyText , "Click On FilterTab");
+        waitingFor(3000);
+        click(verifyText , "Click On FilterTab");
+        click(filterBackButton,"click on the filter back btn");
+        click(outsideOfFilter,"click out side of the filter");
+    }
+
+    public void navigateToLiveStreamtab() {
+        navigateToFirstShow();
+        homeScreen.navigateToHomepage();
+
     }
 
     public void  validateFilter() {
+        clickOnRunway();
         Assert.assertTrue(brandFilter.isDisplayed());
         Assert.assertTrue(seasonFilter.isDisplayed());
         Assert.assertTrue(typeFilter.isDisplayed());
-//        swipeLeft();
         Assert.assertTrue(locationFilter.isDisplayed());
     }
 
     public void validateSearchboxInOptions(){
+        clickOnRunway();
+        verifyElementPresentAndClick(imageArchieve,"click on image Archive");
+        click(filterOption,"click on filter option");
+        waitingFor(3000);
         click(selectBrand,"Click On SelectBrand");
         Assert.assertTrue(searchTab.isDisplayed());
         click(filterBackButton,"Click on FilterBackbutton");
@@ -404,14 +445,19 @@ public class RunwayScreen extends ScreenActions {
         click(filterBackButton,"Click on FilterBackbutton");
         click(locationFilter,"Click on LocationFilter");
         Assert.assertTrue(searchTab.isDisplayed());
-
+        click(filterBackButton,"Click on FilterBackbutton");
+        click(outsideOfFilter,"click on outside of filter");
     }
 
     public void validateOptionswithCheckBox(){
+        clickOnRunway();
+        click(imageArchieve,"Click On Image Archieve");
+        click(filterOption,"Click On FilterTab");
         click(locationTab,"Click on LocationTab");
-        Assert.assertTrue(filterByLocation.isDisplayed());
+        Assert.assertTrue(verifyText.isDisplayed());
+        click(filterBackButton,"click on the filter back btn");
+        click(outsideOfFilter,"click out side of the filter");
     }
-    //Maruthu's code end
 
 
 
@@ -434,10 +480,7 @@ public class RunwayScreen extends ScreenActions {
         waitForVisibility(FilterOption, 10);
     }
 
-//    public void navigateToFirstShow(){
-//        navigateToRunwaytab(); // Navigate to runway tab
-//        Assert.assertTrue(verifyElementPresentAndClick(firestShowInCollection , "First show in Runway Tab"), "First show in Runway Tab");
-//    }
+
 
     public void navigateToSaveToBoardsScreen() {
         Assert.assertTrue(verifyElementPresentAndClick(optionsinFirstShowScreen, "Options in First Show Screen"),"Options in First Show Screen should be displayed");
@@ -459,12 +502,41 @@ public class RunwayScreen extends ScreenActions {
         Assert.assertTrue(verifyElementPresent(CreateBoardScreenTitle, "Create Board Screen Title"),"Create Board Screen Title should be displayed");
     }
 
-    //VD-TC-212: Entering Board Name and validating if Create button is enabled
+
     public void validateIfCreateButtonInCreateBoardIsEnabledUponEnteringBoardname(){
         navigateToCreateBoardScreen();
         Assert.assertTrue(isElementDisabled(CreateButtonInCreateBoardScreen, "Create Button In Create Board Screen"),"Create Button In Create Board Screen should be Disabled");
         type(BoardNameTextField, "Boar", "Board Name textfield");
         Assert.assertTrue(isElementEnabled(CreateButtonInCreateBoardScreen, "Create Button In Create Board Screen"),"Create Button In Create Board Screen should be Enabled");
+    }
+
+    public void validateAddToBoardCta() {
+        homeScreen.clickOnProfileIcon();
+        click(profileScreen.createBoardButton, "Create Board Name");
+        String testBoardName = "Testing";
+        profileScreen.boardNameTextBox.clear();
+        profileScreen.boardNameTextBox.sendKeys(testBoardName);
+        click(profileScreen.createButton,"Click On CreateButton");
+        clickOnRunway();
+        click(firstShowInCollection, "Click On Firstshow");
+        waitingFor(2000);
+        verifyElementPresentAndClick(firstShowInCollectionDetails , "Click On A Show in Collections Details");
+        click(bookMark, "Click on bookmark button");
+        waitForVisibility(testingBoard,15);
+        click(testingBoard,"Click On TestBoard");
+        waitingFor(2000);
+        Assert.assertTrue(addedToBoardCta.isDisplayed());
+        click(BackCTAInShow,"click on back Btn");
+        click(BackCTAInShow,"click on back Btn");
+        click(BackCTAInShow,"click on back Btn");
+    }
+
+    public void validateTrendingAndLatest(){
+        navigateToRunwaytab();
+        click(imageArchieve , "Click On Image Archieve");
+        waitingFor(3000);
+        Assert.assertTrue(trendingAndLatest.isDisplayed());
+
     }
 
 

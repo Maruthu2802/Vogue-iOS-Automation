@@ -64,7 +64,7 @@ public class PostScreen extends ScreenActions {
     public MobileElement PostToScreenTitle;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='Back']")
-    public MobileElement BackButtonInPostToScreen;
+    public MobileElement backButtonInPostToScreen;
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='SKIP']")
     public MobileElement SkipButtonInNewPost;
@@ -84,9 +84,9 @@ public class PostScreen extends ScreenActions {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Your post has been published.']")
     public MobileElement YourPostHasBeenPublishedToastMessage;
 
+
+
     //Maruthu's code
-    @iOSXCUITFindBy(xpath="//XCUIElementTypeOther[@name='Vogue']")
-    public MobileElement appHeading;
 
     @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name='POST, Tab 3 of 5']")
     public MobileElement postIcon;
@@ -96,6 +96,9 @@ public class PostScreen extends ScreenActions {
 
     @iOSXCUITFindBy(accessibility = "Type your post here...")
     public MobileElement textBox;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeTextField[contains(@value, 'AAAA')]")
+    public MobileElement afterTextEnteredInPost;
 
     @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name='NEXT']")
     public MobileElement nextTab;
@@ -118,11 +121,6 @@ public class PostScreen extends ScreenActions {
     @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name='TAKE A VIDEO']")
     public MobileElement takeVideo;
 
-    @iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[contains(@name,'Camera')]")
-    public MobileElement accessPermission;
-
-    @iOSXCUITFindBy(className = "'XCUIElementTypeTextField'")
-    public MobileElement textEntered;
 
     @iOSXCUITFindBy(xpath="(//XCUIElementTypeOther[@name='Photos']//XCUIElementTypeImage)[1]")
     public MobileElement galleryPhotos;
@@ -130,11 +128,10 @@ public class PostScreen extends ScreenActions {
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@name='Photos']//XCUIElementTypeImage")
     public List<MobileElement> galleryPhotosList;
 
+
     @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name='Add']")
     public MobileElement galleryAddTab;
 
-    @iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[contains(@name,'Your post']")
-    public MobileElement postSuccessful;
 
     @iOSXCUITFindBy(xpath="//XCUIElementTypeOther[@name='BEAUTY']")
     public MobileElement brandTab;
@@ -157,6 +154,11 @@ public class PostScreen extends ScreenActions {
     @iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[@name='Up to four images may be attached. Please try again']")
     public MobileElement popUp;
 
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeStaticText[@name='Scrim']")
+    public MobileElement hidePopUp;
+
+
+
     public void clickOnPostIcon () {
         waitForElementToBeClickable(postIcon,10);
         click(postIcon, "Clicking on the PostIcon");
@@ -172,38 +174,45 @@ public class PostScreen extends ScreenActions {
     }
 
     public void enterMoreThan500Text () {
+        clickOnPostIcon();
         enterCharactersInTextBox(textBox, 500);
         click(nextTab, "Clicking on the NextTab");
         click(brandSelection, "Clicking on the BrandSelection");
         click(nextTab, "Clicking on the NextTab");
         Assert.assertTrue(headerPost.isEnabled());
+        closeAndLaunchApp();
 
     }
 
     public void validateAfterclickingCamera ()  {
+        clickOnPostIcon();
         click(cameraIcon, "Clicking on the CameraTab");
         Assert.assertTrue(isElementVisible(takePhoto));
         Assert.assertTrue(isElementVisible(takeVideo));
+        click(hidePopUp,"Click On Screen");
+        closeAndLaunchApp();
     }
 
-    public void enterTextOnPost() {
+    public void validateMaxCharactersAllowedInPost() {
+        clickOnPostIcon();
         enterCharactersInTextBox(textBox, 502);
-        String text = textBox.getText();
-        if (text != null && text.length() == 500) {
-            System.out.println("✅ Validation Passed: Textbox allows only 500 characters.");
-        } else {
-            System.out.println("❌ Validation Failed: Textbox has "
-                    + (text == null ? "null" : text.length()) + " characters.");
-        }
+        String text = afterTextEnteredInPost.getText();
+        Assert.assertNotNull(text, "❌ Validation Failed: Textbox value is null");
+        Assert.assertEquals(text.length(), 500,
+                "❌ Validation Failed: Textbox accepted " + (text == null ? "null" : text.length()) + " characters instead of 500");
+        System.out.println("✅ Validation Passed: Textbox allows only 500 characters.");
+        closeAndLaunchApp();
     }
 
     public void validatePostIconOnPosting() {
+        clickOnPostIcon();
         click(galleryIcon,"Click On GalleryIcon");
         click(galleryPhotos,"Click on GalleryPhotos");
         click(galleryAddTab,"Click on AddTab");
         click(nextTab,"Click On NextTab");
         click(skipTab,"Click On SkipTab");
         click(headerPost,"Click On HeaderPost");
+        closeAndLaunchApp();
     }
 
     public void discardThePost() {
@@ -213,6 +222,7 @@ public class PostScreen extends ScreenActions {
     }
 
     public void clickOnCategories() {
+        clickOnPostIcon();
         click(nextTab,"Click on NextTab");
         click(brandTab,"Click on BrandTab");
         click(celebrityTab,"Click on CelebrityTab");
@@ -220,13 +230,16 @@ public class PostScreen extends ScreenActions {
         click(designersTab,"Click on DesignersTab");
         click(nextTab,"Click On NextTab");
         click(headerPost,"Click On HeaderPost");
+        closeAndLaunchApp();
     }
 
     public void clickOnCameraCancel() {
+        clickOnPostIcon();
         click(cameraIcon,"Click On CameraIcon");
         click(takePhoto,"Click On TakePhoto");
         click(cancelTab,"Click On CancelTab");
         Assert.assertTrue(newPost.isEnabled());
+        closeAndLaunchApp();
     }
 
     public void selectFirstFourImages() {
@@ -239,13 +252,18 @@ public class PostScreen extends ScreenActions {
     }
 
     public void clickOnPostTabToPost() {
+        clickOnPostIcon();
+        click(galleryIcon,"Click On GalleryIcon");
+        click(galleryPhotos,"Click on GalleryPhotos");
         click(galleryAddTab,"Click on AddTab");
         click(nextTab,"Click On NextTab");
         click(skipTab,"Click On SkipTab");
         click(headerPost,"Click On HeaderPost");
+        closeAndLaunchApp();
     }
 
     public void selectFirstFiveImages() {
+        clickOnPostIcon();
         click(galleryIcon,"Click On GalleryIcon");
         int limit = Math.min(5, galleryPhotosList.size()); // in case less than 4
         for (int i = 0; i < limit; i++) {
@@ -253,57 +271,55 @@ public class PostScreen extends ScreenActions {
             System.out.println("✅ Selected image at index: " + i);
         }
         click(galleryAddTab,"Click on AddTab");
+        waitForVisibility(popUp,5);
         Assert.assertTrue(popUp.isDisplayed());
+        closeAndLaunchApp();
     }
+
     //Maruthu's code end
 
     //VD-TC-350-Verify user can have option for post tab below the screen
     public void validatePostBottomTab(){
         waitForVisibility(vogueCTA, 30);
-        Assert.assertTrue(verifyElementPresent(PostBottomTab, "Post Bottom Tab"),"Post Bottom Tab is not displayed");
+        Assert.assertTrue(verifyElementPresent(PostBottomTab, "Post Bottom Tab"),"Post Bottom Tab should be displayed");
     }
 
     public void navigateToNewPostScreen(){
-        waitForVisibility(vogueCTA, 15);
+        waitForVisibility(vogueCTA, 30);
         click(PostBottomTab, "Post Bottom Tab");
     }
 
     //VD-TC-351	Verify when user click on post tab it should navigate to new page having title "New post" on the top.
     public void validateNavigationToNewPostScreen(){
         navigateToNewPostScreen();
-        Assert.assertEquals(getText(NewPostHeader), "New post", "'New Post' header text is not displayed");
-        Assert.assertTrue(verifyElementPresent(NewPostHeader, "New Post Header"), "New Post Header is not displayed");
-        closeAndLaunchApp();                        //Supposed to click on Back button but for now its a work around
+        Assert.assertTrue(verifyElementPresent(NewPostHeader, "New Post Header"), "New Post Header should be displayed");
     }
 
     //VD-TC-352	Verify when user name & profile pic in new post page
     public void validateUserNameAndProfilePicInNewPostScreen(){
         navigateToNewPostScreen();
-        Assert.assertTrue(verifyElementPresent(UserProfilePicInNewPostScreen, "User Profile Pic In New Post Screen"),"User Profile Pic In New Post Screen is not displayed");
-        Assert.assertTrue(verifyElementPresent(UsernameInNewPostScreen, "Username In New Post Screen"),"Username In New Post Screen is not displayed");
-        closeAndLaunchApp();                        //Supposed to click on Back button but for now its a work around
+        Assert.assertTrue(verifyElementPresent(UserProfilePicInNewPostScreen, "User Profile Pic In New Post Screen"),"User Profile Pic In New Post Screen should be displayed");
+        Assert.assertTrue(verifyElementPresent(UsernameInNewPostScreen, "Username In New Post Screen"),"Username In New Post Screen should be displayed");
     }
 
     //VD-TC-353	Verify placeholder text "Type your post here.."
     public void validatePlaceHolderTextInNewPostScreen(){
         navigateToNewPostScreen();
-        Assert.assertTrue(verifyElementPresent(TypeYourPostHerePlaceholderText, "Type Your Post Here Placeholder Text"),"Type Your Post Here Placeholder Text is not displayed");
-        closeAndLaunchApp();                        //Supposed to click on Back button but for now its a work around
+        Assert.assertTrue(verifyElementPresent(TypeYourPostHerePlaceholderText, "Type Your Post Here Placeholder Text"),"Type Your Post Here Placeholder Text should be displayed");
     }
 
     public void addPicsToNewPostFromGallery(){
-        Assert.assertTrue(verifyElementPresentAndClick(GalleryButtonInNewPost, "Gallery Button In New Post"), "Gallery Button In New Post is not displayed");
-        Assert.assertTrue(verifyElementPresentAndClick(FirstPicInGallery, "First Pic In Gallery"), "First Pic In Gallery is not displayed");
-        Assert.assertTrue(verifyElementPresentAndClick(SecondPicInGallery, "Second Pic In Gallery"), "Second Pic In Gallery is not displayed");
-        Assert.assertTrue(verifyElementPresentAndClick(ThirdPicInGallery, "Third Pic In Gallery"), "Third Pic In Gallery is not displayed");
-        Assert.assertTrue(verifyElementPresentAndClick(FourthPicInGallery, "Fourth Pic In Gallery"), "Fourth Pic In Gallery is not displayed");
-        Assert.assertTrue(verifyElementPresentAndClick(AddButtonInNewPost, "Add Button In New Post"), "Add Button In New Post is not displayed");
-        waitingFor(10000);
+        Assert.assertTrue(verifyElementPresentAndClick(GalleryButtonInNewPost, "Gallery Button In New Post"), "Gallery Button In New Post should be displayed");
+        Assert.assertTrue(verifyElementPresentAndClick(FirstPicInGallery, "First Pic In Gallery"), "First Pic In Gallery should be displayed");
+        Assert.assertTrue(verifyElementPresentAndClick(SecondPicInGallery, "Second Pic In Gallery"), "Second Pic In Gallery should be displayed");
+        Assert.assertTrue(verifyElementPresentAndClick(ThirdPicInGallery, "Third Pic In Gallery"), "Third Pic In Gallery should be displayed");
+        Assert.assertTrue(verifyElementPresentAndClick(FourthPicInGallery, "Fourth Pic In Gallery"), "Fourth Pic In Gallery should be displayed");
+        Assert.assertTrue(verifyElementPresentAndClick(AddButtonInNewPost, "Add Button In New Post"), "Add Button In New Post should be displayed");
     }
 
     public void navigateToPostToScreen(){
         click(NextButtonInNewPost, "Next Button In New Post");
-        Assert.assertTrue(verifyElementPresent(PostToScreenTitle, "Post To Screen Title"), "Post To Screen Title is not displayed");
+        Assert.assertTrue(verifyElementPresent(PostToScreenTitle, "Post To Screen Title"), "Post To Screen Title should be displayed");
     }
 
     //VD-TC-366-Verify when user click on 'cancel' on continue publishing pop up it's get cancel successfully
@@ -311,13 +327,13 @@ public class PostScreen extends ScreenActions {
         navigateToNewPostScreen();
         addPicsToNewPostFromGallery();
         navigateToPostToScreen();
-        click(BackButtonInPostToScreen, "Back Button In Post To Screen");
-        Assert.assertTrue(verifyElementPresent(NewPostHeader, "New Post Header"), "New Post Header is not displayed");
+        click(backButtonInPostToScreen, "Back Button In Post To Screen");
+        Assert.assertTrue(verifyElementPresent(NewPostHeader, "New Post Header"), "New Post Header should be displayed");
     }
 
     public void validatePostButtonInNewPostScreen(){
-        Assert.assertTrue(verifyElementPresentAndClick(SkipButtonInNewPost, "Skip Button In New Post"),"Skip Button In New Post is not displayed");
-        Assert.assertTrue(verifyElementPresent(PostButtonInNewPost, "Post Button In New Post"),"Post Button In New Post is not displayed");
+        Assert.assertTrue(verifyElementPresentAndClick(SkipButtonInNewPost, "Skip Button In New Post"),"Skip Button In New Post should be displayed");
+        Assert.assertTrue(verifyElementPresent(PostButtonInNewPost, "Post Button In New Post"),"Post Button In New Post should be displayed");
     }
 
     //VD-TC-364 Verify when image get post successfully it should show pop up "CONTINUE PUBLISHING?"
@@ -325,11 +341,9 @@ public class PostScreen extends ScreenActions {
         navigateToNewPostScreen();
         addPicsToNewPostFromGallery();
         navigateToPostToScreen();
+        click(backButtonInPostToScreen, "Back Button In Post To Screen");
         validatePostButtonInNewPostScreen();
-//        waitingFor(20000);
-        Assert.assertTrue(verifyElementPresentAndClick(PostButtonInNewPost, "Post Button in New Post Screen"), "Post button is not clicked");
-        Assert.assertTrue(verifyElementPresent(ContinuePublishingPopup, "Continue Publishing Popup"),"Continue Publishing Popup is not displayed");
-
+        Assert.assertTrue(verifyElementPresent(ContinuePublishingPopup, "Continue Publishing Popup"),"Continue Publishing Popup should be displayed");
     }
 
     //VD-TC-365-Verify when user click on "publish " on continue publishing pop up it's get publish successfully.
@@ -337,10 +351,10 @@ public class PostScreen extends ScreenActions {
         navigateToNewPostScreen();
         addPicsToNewPostFromGallery();
         navigateToPostToScreen();
-        click(BackButtonInPostToScreen, "Back Button In Post To Screen");
+        click(backButtonInPostToScreen, "Back Button In Post To Screen");
         validatePostButtonInNewPostScreen();
-        Assert.assertTrue(verifyElementPresentAndClick(PublishButtonInContinuePublishingPopup, "Publish Button in Continue Publishing Popup"),"Publish Button in Continue Publishing Popup is not clicked");
-        Assert.assertTrue(verifyElementPresent(YourPostHasBeenPublishedToastMessage, "Your Post Has Been Published Toast Message"), "Your Post Has Been Published Toast Message is not displayed");
+        verifyElementPresentAndClick(PublishButtonInContinuePublishingPopup, "Publish Button in Continue Publishing Popup");
+        Assert.assertTrue(verifyElementPresent(YourPostHasBeenPublishedToastMessage, "Your Post Has Been Published Toast Message"), "Your Post Has Been Published Toast Message should be displayed");
     }
 
     //VD-TC-366-Verify when user click on "cancel" on continue publishing pop up it's get cancel successfully.
@@ -348,11 +362,13 @@ public class PostScreen extends ScreenActions {
         navigateToNewPostScreen();
         addPicsToNewPostFromGallery();
         navigateToPostToScreen();
-        click(BackButtonInPostToScreen, "Back Button In Post To Screen");
+        click(backButtonInPostToScreen, "Back Button In Post To Screen");
         validatePostButtonInNewPostScreen();
         verifyElementPresentAndClick(CancelButtonInContinuePublishingPopup, "Publish Button in Continue Publishing Popup");
-        Assert.assertTrue(verifyElementPresent(YourPostHasBeenPublishedToastMessage, "Your Post Has Been Published Toast Message"), "Your Post Has Been Published Toast Message is not displayed");
+        Assert.assertTrue(verifyElementPresent(YourPostHasBeenPublishedToastMessage, "Your Post Has Been Published Toast Message"), "Your Post Has Been Published Toast Message should be displayed");
     }
+
+
 
 
 

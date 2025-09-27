@@ -115,129 +115,59 @@ public class ProfileScreen extends ScreenActions {
     @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name='Options']")
     public MobileElement clickOnThreeDots;
 
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='SELECT IMAGES TO REMOVE']")
+    public MobileElement selectImagesToRemove;
+
+    @iOSXCUITFindBy(xpath = "(//XCUIElementTypeOther//XCUIElementTypeOther/following-sibling::XCUIElementTypeImage)[1]")
+    public MobileElement validateMultiSelectButton;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeOther[@traits='Header' and @visible='true']")
+    public MobileElement validateHeader;
+
     @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name='REORDER IMAGES']")
     public MobileElement reorderImages;
 
-//    public void validateImageReorderInBoard() {
-//        click(clickBoard,"Click On BoardImages");
-//        Thread.sleep(10000);
-//        click(clickOnThreeDots,"Click On The ThreeDots");
-//        click(reorderImages,"Click On ReorderImages");
-//        // 1. Capture initial order of board images only (ignore saved ones)
-//        List<MobileElement> filteredBoardImages = new ArrayList<>();
-//        for (MobileElement img : boardImages) {
-//            String name = img.getAttribute("name");
-//            String label = img.getAttribute("label");
-//
-//            // Ignore saved images (adjust condition based on your AUT)
-//            if (name != null && name.toLowerCase().contains("saved")) {
-//                continue;
-//            }
-//            filteredBoardImages.add(img);
-//        }
-//
-//        if (filteredBoardImages.size() < 3) {
-//            throw new AssertionError("❌ Not enough board images available to perform reorder test.");
-//        }
-//
-//        // Save initial order
-//        List<String> initialOrder = new ArrayList<>();
-//        for (MobileElement img : filteredBoardImages) {
-//            initialOrder.add(img.getAttribute("name") != null ? img.getAttribute("name") : img.getAttribute("label"));
-//        }
-//
-//        // 2. Drag and drop (move 1st board image to 3rd position)
-//        ScreenActions.dragAndDrop(filteredBoardImages.get(0), filteredBoardImages.get(2));
-//
-//        // 3. Refresh board images after reorder
-//        List<MobileElement> updatedImages = DriverManager.getDriver()
-//                .findElements(By.xpath("//XCUIElementTypeOther//XCUIElementTypeImage"));
-//
-//        // Filter again to ignore saved images
-//        List<String> newOrder = new ArrayList<>();
-//        for (MobileElement img : updatedImages) {
-//            String name = img.getAttribute("name");
-//            if (name != null && name.toLowerCase().contains("saved")) {
-//                continue;
-//            }
-//            newOrder.add(name != null ? name : img.getAttribute("label"));
-//        }
-//
-//        // 4. Validate order has changed
-//        Assert.assertNotEquals(initialOrder, newOrder,
-//                "❌ Image order did not change after drag and drop.");
-//
-//        // 5. Validate dragged image moved to expected position
-//        Assert.assertEquals(initialOrder.get(0), newOrder.get(2),
-//                "❌ The dragged image did not move to the expected position.");
-//
-//        System.out.println("✅ Validation Passed: Board images reordered correctly.");
-//    }
+    @iOSXCUITFindBy(xpath="//XCUIElementTypeButton[@name='CANCEL']")
+    public MobileElement cancelButton;
+
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeButton[@name='Dismiss']")
+    public MobileElement dismissCreateBoardButton;
 
 
-//    public void validateImageReorderInTestingBoard() {
-//        click(testingBoard, "Click On TestingBoard");
-//        click(clickOnThreeDots, "Click On The ThreeDots");
-//        click(reorderImages, "Click On ReorderImages");
-//        Thread.sleep(10000);
-//        dragAndDrop(boardFirstImage, boardSixthImage);
-
-    //        // 1. Capture initial order
-//        List<String> initialOrder = new ArrayList<>();
-//        for (MobileElement img : testingBoardImages) {
-//            initialOrder.add(img.getAttribute("name") != null
-//                    ? img.getAttribute("name")
-//                    : img.getAttribute("label"));
-//        }
-//
-//        if (testingBoardImages.size() < 3) {
-//            throw new AssertionError("❌ Not enough images in Testing board to reorder.");
-//        }
-//
-//        // 2. Drag 1st → 3rd
-//        ScreenActions.dragAndDrop(testingBoardImages.get(0), testingBoardImages.get(2));
-//
-//        // 3. Refresh images from Testing board only
-//        List<MobileElement> updatedBoardImages = DriverManager.getDriver()
-//                .findElements(By.xpath("//XCUIElementTypeOther[.//XCUIElementTypeStaticText[@name='TESTING']]//XCUIElementTypeImage"));
-//
-//        List<String> newOrder = new ArrayList<>();
-//        for (MobileElement img : updatedBoardImages) {
-//            newOrder.add(img.getAttribute("name") != null
-//                    ? img.getAttribute("name")
-//                    : img.getAttribute("label"));
-//        }
-//
-//        // 4. Validate
-//        Assert.assertNotEquals(initialOrder, newOrder, "❌ Order did not change in Testing board.");
-//        Assert.assertEquals(initialOrder.get(0), newOrder.get(2),
-//                "❌ The dragged image did not move to expected position.");
-//
-//        System.out.println("✅ Validation Passed: Images reordered correctly in Testing board.");
-//    }
-    //   }
     public void createBoard(){
+        homeScreen.clickOnProfileIcon();
+        waitingFor(20);
         click(createBoardButton,"Click On CreateBoard");
         Assert.assertTrue(boardNameBox.isDisplayed());
         Assert.assertTrue(boardDescription.isDisplayed());
         Assert.assertFalse(createButton.isEnabled());
+        scrollDownHoldingElement(dismissCreateBoardButton);
+        click(backButton, "Back Button");
     }
 
     public void createButtonEnabled(String commentText){
+        homeScreen.clickOnProfileIcon();
+        waitingFor(20);
         click(createBoardButton,"Click On CreateBoard");
         click(boardNameBox,"Click On BoardNameBox");
         type(boardNameBox, commentText, "Add a Comment Field");
         Assert.assertTrue(createButton.isEnabled());
+        scrollDownHoldingElement(dismissCreateBoardButton);
+        click(backButton, "Back Button");
     }
 
     public void boardCreated(String commentText){
+        homeScreen.clickOnProfileIcon();
+        waitingFor(5000);
         click(createBoardButton,"Click On CreateBoard");
         click(boardNameBox,"Click On BoardNameBox");
-        type(boardNameBox, commentText, "Add a Comment Field");
+        String testBoardName = "Test";
+        boardNameTextBox.sendKeys(testBoardName);
         click(createButton,"Click On CreateButton");
-        Assert.assertTrue(testBoardCreated.isDisplayed());
+        Assert.assertTrue(verifyElementPresent(testBoardCreated, "Create Board"));
+        click(backButton, "Back Button");
     }
-    //Maruthu's code end
+
 
 
 
@@ -351,6 +281,32 @@ public class ProfileScreen extends ScreenActions {
         Assert.assertEquals(actualText.trim(), addnote.trim(),
                 "Saved note text did not match the entered text!");
 
+    }
+
+    public void validateCreateBoardCta() {
+        homeScreen.clickOnProfileIcon();
+        waitingFor(10000);
+        Assert.assertTrue(verifyElementPresent(createBoardButton, "Create Board"));
+        click(backButton, "Back Button");
+    }
+
+    public void clickOnAllSavedImages() {
+        homeScreen.clickOnProfileIcon();
+        click(allSavedImages, "Click On AllSavedImages");
+        click(clickOnThreeDots, "Click On ThreeDots");
+        click(selectImagesToRemove, "Click On SelectImagesToRemove");
+        Assert.assertTrue(validateMultiSelectButton.isDisplayed());
+        click(cancelButton,"Cancel Button");
+        click(backButton, "Back Button");
+        click(backButton, "Back Button");
+        click(backButton, "Back Button");
+    }
+
+    public void scrollUntilHeaderVisible() {
+        homeScreen.clickOnProfileIcon();
+        scrollUntilElementVisible(validateHeader);
+        Assert.assertTrue(validateHeader.isDisplayed());
+        click(backButton,"Back Button");
     }
 
 
