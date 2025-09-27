@@ -11,7 +11,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.remote.HideKeyboardStrategy;
+import io.appium.java_client.touch.offset.ElementOption;
 import org.apache.commons.io.FileUtils;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -35,6 +37,8 @@ import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import static com.automate.driver.Manager.DriverManager.getDriver;
 
 public class ScreenActions {
 
@@ -96,13 +100,62 @@ public class ScreenActions {
     }
 
     public static void click(MobileElement element, String elementName) {
+        WebDriver driver = getDriver();
+
+        if (driver == null) {
+            ExtentReportLogger.logFail("Driver is null. Cannot click on element: "+elementName,null);
+            return;
+        }
+
+        if (element == null) {
+            ExtentReportLogger.logFail("Element is null. Cannot click on: " + elementName,null);
+            return;
+        }
+
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        boolean clicked = false;
+
         try {
-            WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), 20);
-            wait.until(ExpectedConditions.visibilityOf(element));
-            element.click();
-            ExtentReportLogger.logInfo("Clicked on " + elementName);
+            wait.until(ExpectedConditions.elementToBeClickable(element));
         } catch (Exception e) {
-            ExtentReportLogger.logFail("Exception occurred when clicking on - " + elementName, e);
+            ExtentReportLogger.logInfo("Element not clickable immediately - retrying with fallback. Element: " + elementName);
+        }
+
+        // Try native click
+        try {
+            element.click();
+            clicked = true;
+            ExtentReportLogger.logInfo("Clicked on " + elementName + " using native click");
+        } catch (Exception e1) {
+            ExtentReportLogger.logInfo("Native click failed on " + elementName + " | Exception: " + e1);
+
+            // Try TouchAction fallback (only if driver supports it)
+            try {
+                if (driver instanceof PerformsTouchActions) {
+                    TouchAction<?> action = new TouchAction<>((PerformsTouchActions) driver);
+                    action.tap(ElementOption.element(element)).perform();
+                    clicked = true;
+                    ExtentReportLogger.logInfo("Tapped on " + elementName + " using TouchAction");
+                } else {
+                    ExtentReportLogger.logInfo("Driver does not support TouchAction, skipping.");
+                }
+            } catch (Exception e2) {
+                ExtentReportLogger.logInfo("TouchAction failed on " + elementName + " | Exception: " + e2);
+
+                // Final fallback: JavaScript click (works in Lambda/BrowserStack)
+                try {
+                    JavascriptExecutor js = (JavascriptExecutor) driver;
+                    js.executeScript("arguments[0].click();", element);
+                    clicked = true;
+                    ExtentReportLogger.logInfo("Clicked on " + elementName + " using JavaScript");
+                } catch (Exception e3) {
+                    ExtentReportLogger.logFail("All click strategies failed on " + elementName + " | Exception: " + e3, e3);
+                }
+            }
+        }
+
+        if (clicked) {
+            ExtentReportLogger.logPass("Click succeeded on " + elementName);
         }
     }
 
